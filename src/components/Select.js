@@ -24,7 +24,6 @@ function Select(props) {
           readOnly
         />
         <div className="select__value">
-          <img src={`/img/${valueImage(value)}.png`} title alt />
           <span>{valueDisplay(value)}</span>
         </div>
       </div>

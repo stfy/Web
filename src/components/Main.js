@@ -27,6 +27,7 @@ function Main(props) {
           <SidebarActivation />
           <Sidebar />
           <Header address={address} connectWeb3={connectWeb3} />
+
           <Switch>
             <Route path="/account">
               <HeaderAccountBalance globalTotal={globalTotal} />
@@ -41,9 +42,9 @@ function Main(props) {
             <Route path="/privacy">
               <HeaderBalance value=" " />
             </Route>
-            <Route path="/">
-              <HeaderBalance />
-            </Route>
+            {/*<Route path="/">*/}
+            {/*  <HeaderBalance />*/}
+            {/*</Route>*/}
           </Switch>
           <Switch>
             <Route exact path="/">
@@ -70,7 +71,8 @@ function Main(props) {
               <TokenRequest connectWeb3={connectWeb3} />
             </Route>
           </Switch>
-          <Footer />
+
+          {/*<Footer />*/}
         </main>
       </Router>
     </ApolloProvider>

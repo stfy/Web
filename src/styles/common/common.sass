@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap')
+
 @import "../utility/utility"
 .common
   font-size: 10px
@@ -9,11 +11,11 @@
     -webkit-tap-highlight-color: transparent
     outline: none
   &__body
-    font-family: "Helvetica", sans-serif
+    font-family: 'Montserrat', sans-serif
     margin: 0
     font-weight: 400
     font-size: 16px
-    color: white
+    color: #383434
     position: relative
     background-color: black
 img, iframe
@@ -23,13 +25,15 @@ img
   object-fit: contain
 .app
   display: flex
+  overflow-x: hidden
   flex-flow: column nowrap
   min-height: 100vh
   position: relative
-  width: calc(100% - 10rem)
-  background: url("../../img/bg.jpg") repeat top left
+  width: calc(100% - 8rem)
+  background: #232323
+  //background: url("../../img/bg.png") repeat top left
   background-size: 100% auto
-  margin-left: 10rem
+  margin-left: 8rem
   //overflow-x: hidden
   z-index: 1
   label, button
@@ -74,8 +78,6 @@ img
   .main
     width: 100%
     flex-grow: 1
-    padding: 0 var(--offset)
-    max-width: 1600px
   .hidden
     display: none
   .link-full

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { tokens, legacyTokens } from "./data/tokens";
+import { legacyTokens, tokens } from "./data/tokens";
 import AssetTableRow from "./AssetTableRow";
 import AssetTableHeader from "./AssetTableHeader";
 
@@ -16,28 +16,15 @@ function AssetTable(props) {
   }, [location]);
 
   return (
-    <div className="section _full main-table _mb">
+    <div
+      className="section _full main-table _mb"
+      style={{ paddingTop: 0, top: "-10rem" }}
+    >
       <AssetTableHeader />
-      {tokens.map((token) => (
-        <AssetTableRow
-          open={open === token}
-          onClick={() => {
-            if (open === token) {
-              setOpen(null);
-            } else {
-              setOpen(token);
-            }
-          }}
-          key={token}
-          tokenName={token}
-          connectWeb3={connectWeb3}
-        />
-      ))}
 
-      {legacyTokens.map((token) => (
-        <>
+      <div className="main-table__asset_wrapper">
+        {tokens.map((token) => (
           <AssetTableRow
-            legacy={true}
             open={open === token}
             onClick={() => {
               if (open === token) {
@@ -48,9 +35,28 @@ function AssetTable(props) {
             }}
             key={token}
             tokenName={token}
+            connectWeb3={connectWeb3}
           />
-        </>
-      ))}
+        ))}
+
+        {legacyTokens.map((token) => (
+          <>
+            <AssetTableRow
+              legacy={true}
+              open={open === token}
+              onClick={() => {
+                if (open === token) {
+                  setOpen(null);
+                } else {
+                  setOpen(token);
+                }
+              }}
+              key={token}
+              tokenName={token}
+            />
+          </>
+        ))}
+      </div>
     </div>
   );
 }

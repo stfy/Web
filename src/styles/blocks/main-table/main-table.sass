@@ -5,6 +5,20 @@
     padding: 0 var(--offset)
     position: relative
     transition: all 0.3s
+    font-size: 1.8rem
+    background: rgba(52, 52, 52, 0.5)
+    &.main-table__thead
+      color: white
+      height: 10rem
+      margin: 0 8rem
+    &.main-table__asset-row
+      height: 18rem
+      border-radius: 2.8rem
+      background: #F7F7F7
+      color: #383434
+      align-items: center
+      &:hover
+        background: #F7F7F7!important
     &.active
       background: var(--color1)
       .main-table__dropdown-btn
@@ -35,11 +49,10 @@
     &:last-child
       padding-right: 0
   &__th
-    font-size: 14px
-    padding: 10px 0 3.7rem 0
-    border-bottom: 1px solid var(--color13)
+    font-size: 1.8rem
+    line-height: 10rem
+    height: 10rem
     text-align: right
-    margin-bottom: 2.2rem
     &:first-child
       text-align: left
   &__icon
@@ -48,8 +61,7 @@
     min-width: 3.2rem
     margin-right: 2.8rem
   &__dropdown
-    background: white
-    padding: 0 var(--offset)
+
     display: none
   &__dropdown-btn
     +flex(row nowrap, center, center)
@@ -86,5 +98,10 @@
     a
       min-height: 6rem
 
+
+
+.main-table__asset_wrapper
+  background: #fff
+  padding: 8rem
 
 @import "media"

@@ -10,24 +10,15 @@ function Sidebar(props) {
       </label>
       <div className="sidebar-menu__logo">
         <a href="http://berezka.io">
-          <img
-            className="sidebar-menu__logo-img"
-            src="/img/logo.png"
-            title="Logo"
-            alt="Logo"
-          />
+          <SidebarLogo />
         </a>
       </div>
       {!isBlocked ? (
         <nav className="sidebar-menu__items">
-          <NavLink className="sidebar-menu__item active" to="/account">
+          <NavLink className="sidebar-menu__item" to="/account">
             My Account
           </NavLink>
-          <NavLink
-            activeClassName="none"
-            className="sidebar-menu__item"
-            to="/dashboard"
-          >
+          <NavLink className="sidebar-menu__item" to="/dashboard">
             Dashboard
           </NavLink>
         </nav>
@@ -35,6 +26,31 @@ function Sidebar(props) {
         ""
       )}
     </aside>
+  );
+}
+
+function SidebarLogo() {
+  return (
+    <svg
+      width="21"
+      height="21"
+      viewBox="0 0 21 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12.6543 11.4155L20.1208 2.99683V20.6788L12.6543 11.4155Z"
+        fill="#ECECEC"
+      />
+      <path
+        d="M0.00292969 8.23279H10.8119L17.9668 0H0.00292969V8.23279Z"
+        fill="#ECECEC"
+      />
+      <path
+        d="M0.0026402 11.396L0 20.6645L8.05921 11.396H0.0026402Z"
+        fill="#ECECEC"
+      />
+    </svg>
   );
 }
 

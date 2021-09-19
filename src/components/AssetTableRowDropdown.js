@@ -9,20 +9,18 @@ function AssetTableRowDropdown(props) {
 
   return (
     <div className="main-table__dropdown">
-      <table className="table table-offer">
-        <tbody>
-          <tr>
-            <td>Investment strategy</td>
-            <td>What's it like</td>
-            <td>Details</td>
-            <td>Risk</td>
-          </tr>
-          <tr>
-            <td>{texts[tokenName].name}</td>
-            <td>{texts[tokenName].shortDesc}</td>
-            <td>{texts[tokenName].fullDesc}</td>
-            <td>{texts[tokenName].benefits}</td>
-          </tr>
+      <div className="offer-grid">
+        <div className="offer-grid__head">Investment strategy</div>
+        <div className="offer-grid__head">What's it like</div>
+        <div className="offer-grid__head">Details</div>
+
+        <div className="offer-grid__cell">{texts[tokenName].name}</div>
+        <div className="offer-grid__cell">{texts[tokenName].shortDesc}</div>
+        <div className="offer-grid__cell">{texts[tokenName].fullDesc}</div>
+      </div>
+
+      <div className="offer-request-wrapper">
+        <div className="offer-request">
           {!legacy ? (
             <TokenRequestController
               initialToken={tokenName}
@@ -33,8 +31,8 @@ function AssetTableRowDropdown(props) {
           ) : (
             <OnChainValidation requestedToken={tokenName} />
           )}
-        </tbody>
-      </table>
+        </div>
+      </div>
     </div>
   );
 }

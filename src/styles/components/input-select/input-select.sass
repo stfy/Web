@@ -1,12 +1,17 @@
 .input-select
+  position: relative
+  width: 300px
   +flex(row nowrap, flex-start, stretch)
-  border: 2px solid var(--color9)
   .select
     max-width: 18rem
-    background: var(--color8)
+    position: absolute
+    height: 34px
+    top: 14px
+    right: 14px
+    background-color: #EFEFEF
+    border-radius: 5px
   &._light
     border: none
-    border-bottom: 2px solid var(--color12)
     align-items: flex-end
     padding-bottom: 15px
     .select
@@ -17,8 +22,20 @@
       img
         max-width: 32px
         max-height: 32px
-    .input
-      padding: 0
-      height: initial
-      line-height: 1.37
 
+.TokenRequestInputSelect
+  flex: 1
+  min-width: 300px
+  margin-right: 2rem
+  & .input
+    font-size: 1.6rem
+    letter-spacing: 0.1em
+  & .select
+    max-width: 8rem
+  & .select__input-container
+    height: 34px
+    padding: 0 1rem
+  & .select__value
+    margin-right: 10px
+    font-size: 1.2rem
+    font-weight: bold

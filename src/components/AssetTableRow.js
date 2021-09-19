@@ -36,12 +36,14 @@ function AssetTableRow(props) {
   return (
     <>
       <div
-        className={"main-table__tr activeToggle" + (open ? " active" : "")}
+        className={
+          "main-table__tr main-table__asset-row activeToggle" +
+          (open ? " active" : "")
+        }
         onClick={onClick}
       >
         <div className="main-table__td">
           <div className="main-table__td-row">
-            <img className="main-table__icon" src="img/logo.png" alt="" />
             <span>{tableName}</span>
           </div>
         </div>

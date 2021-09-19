@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Header(props) {
@@ -23,23 +23,51 @@ function Header(props) {
           <i className="icon icon-menu" />
         </label>
         <nav className="header__menu">
-          <Link className="header__menu-item" to="/">
-            Home
-          </Link>
-          <Link className="header__menu-item" to="/">
-            About us
-          </Link>
-          <a
-            className="header__menu-item"
-            target="_blank"
-            href="https://medium.com/berezka-dao"
-          >
-            Blog
-          </a>
+          <div className={"header__menu-links"}>
+            <Link className="header__menu-item" to="/">
+              Home
+            </Link>
+            <Link className="header__menu-item" to="/">
+              About us
+            </Link>
+            <a
+              className="header__menu-item"
+              target="_blank"
+              href="https://medium.com/berezka-dao"
+            >
+              Blog
+            </a>
+
+            <Link className="header__menu-item" to="/dashboard">
+              Dashboard
+            </Link>
+          </div>
+
+          <div className={"header__menu-actions"}>
+            {address ? (
+              <div
+                className="connect__value header__title"
+                style={{ margin: "0 10px 0 0" }}
+              >
+                {address}
+              </div>
+            ) : (
+              <a className="header__menu-item" onClick={connectWeb3}>
+                Connect wallet
+              </a>
+            )}
+
+            <Link
+              className="header__menu-item header__menu-item--bordered"
+              to="/#flex"
+            >
+              Join Dao
+            </Link>
+          </div>
         </nav>
-        <div className="desktop_only header__title">
-          #Berezka DAO - DeFi Asset Management
-        </div>
+        {/*<div className="desktop_only header__title">*/}
+        {/*  #Berezka DAO - DeFi Asset Management*/}
+        {/*</div>*/}
       </div>
       <div
         className="buttons"
@@ -48,26 +76,7 @@ function Header(props) {
           alignItems: "center",
           flex: "0 0 auto",
         }}
-      >
-        {address ? (
-          <div
-            className="connect__value header__title"
-            style={{ margin: "0 10px 0 0" }}
-          >
-            {address}
-          </div>
-        ) : (
-          <a className="desktop_only button _light" href onClick={connectWeb3}>
-            Connect wallet
-          </a>
-        )}
-        <Link className="button _light" to="/dashboard">
-          Dashboard
-        </Link>
-        <Link className="button" to="/#flex">
-          Join Dao
-        </Link>
-      </div>
+      ></div>
     </header>
   );
 }

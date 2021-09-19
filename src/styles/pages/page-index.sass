@@ -1,0 +1,33 @@
+.page-index__wrapper
+  +flex(row nowrap, center, flex-start)
+  background: url("../../img/bg.png") repeat top left
+  height: calc(100vh - 5.5rem)
+
+.page-index__title
+  +flex(row nowrap, space-around, center)
+  flex: 1 0 auto
+  color: white
+  margin-top: 20rem
+  max-width: 970px
+  align-items: flex-start
+  &-left
+    flex: 1 0 50%
+  &-right
+    flex: 1 0 50%
+
+.page-index__title__total-price
+  font-weight: bold
+  font-size: 9rem
+  &-label
+    margin-top: 2rem
+    font-size: 2rem
+    letter-spacing: 0.29em
+
+.page-index__description
+  margin-top: 3rem
+  font-size: 1.8rem
+
+.page-index__description-appendix
+  font-size: 1.6rem
+
+

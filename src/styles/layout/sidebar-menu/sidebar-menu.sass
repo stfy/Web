@@ -1,10 +1,11 @@
 .sidebar-menu
   +flex(row-reverse nowrap, flex-start, stretch)
-  background: black
+  background: #222222
+  color: white
   width: 100vh
   min-width: 100vh
-  bottom: -10rem
-  height: 10rem
+  bottom: -8rem
+  height: 8rem
   left: 0
   z-index: 10
   transition: all 0.5s
@@ -22,22 +23,26 @@
   //  background: var(--color5)
   &__items
     +flex(row-reverse nowrap, flex-end, stretch)
+    padding: 2rem 0
+    padding-right: 4rem
   &__item
     +flex(row nowrap, center, center)
-    font-size: 14px
+    font-size: 10px
     text-transform: uppercase
-    font-weight: 500
-    background: var(--color7)
+    font-weight: 300
+    background: transparent
     padding: 10px
     min-width: 18rem
+    border: 1px solid
+    border-color: transparent
+    border-radius: 7px
     &:last-child
       min-width: 20rem
     &.active
-      background: var(--color1)
+      border-color: var(--btn-border)
   &__logo
     +flex(row nowrap, center, center)
-    padding: 2rem 3rem 2rem 2rem
-    width: 11rem
+    width: 5.5rem
   &__logo-img
     transform: rotate(90deg)
     max-height: 100%
