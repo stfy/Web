@@ -128,7 +128,7 @@ const TokenAmountGraph = (props) => {
 
     series: [
       {
-        color: "#008cb9",
+        color: "#000",
         name: "Portfolio Value",
         data: chartData,
       },

@@ -91,7 +91,7 @@ const TokenPriceGraph = (props) => {
 
   var series = [
     {
-      color: "#008cb9",
+      color: "#000",
       name: "Token Price",
       data: chartData,
     },

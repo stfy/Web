@@ -8,7 +8,7 @@ import TokenPriceLegacy from "./widgets/legacy/TokenPriceLegacy";
 import TokenPrice from "./widgets/TokenPrice";
 
 function AssetTableRow(props) {
-  const { tokenName, connectWeb3, open, onClick, legacy } = props;
+  const { tokenName, connectWeb3, open, onClick, legacy, even } = props;
 
   const { address, tableName } = tokenInfo[tokenName];
 
@@ -38,7 +38,8 @@ function AssetTableRow(props) {
       <div
         className={
           "main-table__tr main-table__asset-row activeToggle" +
-          (open ? " active" : "")
+          (open ? " active" : "") +
+          (even ? " even" : "")
         }
         onClick={onClick}
       >
@@ -62,7 +63,20 @@ function AssetTableRow(props) {
           )}
         </div>
         <div className="main-table__td">
-          <div className="main-table__dropdown-btn" ref={myRef} />
+          <div className="main-table__dropdown-btn" ref={myRef}>
+            <svg
+              width="12"
+              height="8"
+              viewBox="0 0 12 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.585 7.70752L6 3.12254L1.41502 7.70752L0 6.29255L6 0.292551L12 6.29255L10.585 7.70752Z"
+                fill="black"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <AssetTableRowDropdown

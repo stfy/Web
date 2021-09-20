@@ -17,14 +17,15 @@ function AssetTable(props) {
 
   return (
     <div
-      className="section _full main-table _mb"
-      style={{ paddingTop: 0, top: "-10rem" }}
+      className="section main-table"
+      style={{ paddingTop: 0, marginTop: "-10rem" }}
     >
       <AssetTableHeader />
 
       <div className="main-table__asset_wrapper">
-        {tokens.map((token) => (
+        {tokens.map((token, n) => (
           <AssetTableRow
+            even={n % 2 === 0}
             open={open === token}
             onClick={() => {
               if (open === token) {
@@ -39,9 +40,10 @@ function AssetTable(props) {
           />
         ))}
 
-        {legacyTokens.map((token) => (
+        {legacyTokens.map((token, n) => (
           <>
             <AssetTableRow
+              even={n % 2 === 0}
               legacy={true}
               open={open === token}
               onClick={() => {

@@ -26,22 +26,25 @@ function Select(props) {
         <div className="select__value">
           <span>{valueDisplay(value)}</span>
         </div>
-      </div>
-      <div className="select__options">
-        {options.map((option) => (
-          <a
-            key={option}
-            className={"select__option" + (value === option ? " _choosed" : "")}
-            onClick={() => {
-              closeAll();
-              setValue(option);
-            }}
-            href
-          >
-            <img src={`/img/${valueImage(option)}.png`} title alt />
-            <span>{valueDisplay(option)}</span>
-          </a>
-        ))}
+
+        <div className="select__options">
+          {options.map((option) => (
+            <a
+              key={option}
+              className={
+                "select__option" + (value === option ? " _choosed" : "")
+              }
+              onClick={() => {
+                closeAll();
+                setValue(option);
+              }}
+              href
+            >
+              {/*<img src={`/img/${valueImage(option)}.png`} title alt />*/}
+              <span>{valueDisplay(option)}</span>
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );

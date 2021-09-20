@@ -17,15 +17,16 @@ function TokenDashboard(props) {
   const isLegacy = tokenInfo[token].isLegacy;
   const isAdmin = address && admins.includes(address.toLowerCase());
 
+  React.useEffect(() => {
+    props.setTokenName(token);
+  }, []);
+
   return (
     <div className="info-list grid">
       <div className="info-main grid-col-4 grid-md-12">
         <div className="info-main__header">
           <div className="info-main__title">
             {tokenInfo[token].tableName} token price, USD
-          </div>
-          <div className="info-main__icon">
-            <i className="icon icon-chart" />
           </div>
         </div>
         <div className="info-main__value">
@@ -35,9 +36,6 @@ function TokenDashboard(props) {
       <div className="info-main grid-col-4 grid-md-12">
         <div className="info-main__header">
           <div className="info-main__title">Portfolio, USD</div>
-          <div className="info-main__icon">
-            <i className="icon icon-eye" />
-          </div>
         </div>
         <div className="info-main__value">
           <TokenPrice
@@ -51,9 +49,6 @@ function TokenDashboard(props) {
       <div className="info-main grid-col-4 grid-md-12">
         <div className="info-main__header">
           <div className="info-main__title">APY, %</div>
-          <div className="info-main__icon">
-            <i className="icon icon-arrows" />
-          </div>
         </div>
         <div className="info-main__value">
           <APY tokenAddress={tokenAddress} decimals={2} isLegacy={isLegacy} />

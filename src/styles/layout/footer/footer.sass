@@ -1,5 +1,33 @@
 .footer
-  padding: 12rem 0 4rem 0
+  background: #2E2E2E
+  color: white
+  font-size: 14px
+  .policy
+    +flex(column nowrap, center, center)
+    padding-top: 3rem
+    background: white
+    font-size: 1rem
+    font-weight: 300
+    color: black
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    &__link
+      margin-bottom: 3rem
+      text-decoration: none
+  .email
+    +flex(row nowrap, center, center)
+    border-bottom: 1px solid #575757
+    height: 12rem
+    &__link
+      text-align: center
+    &__icon
+      margin-right: 2rem
+
+  .copyright
+    text-align: center
+    height: 6rem
+    line-height: 6rem
+
   &__bottom
     +flex(row nowrap, space-between, flex-end)
   &__menu-item
@@ -15,5 +43,7 @@
     margin-bottom: 11.7rem
     display: grid
     grid-gap: 1.9rem
+
+
 
 @import "media"

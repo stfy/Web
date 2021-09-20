@@ -30,22 +30,20 @@ function Main(props) {
 
           <Switch>
             <Route path="/account">
-              <HeaderAccountBalance globalTotal={globalTotal} />
+              {/*<HeaderAccountBalance globalTotal={globalTotal} />*/}
             </Route>
-            <Route
-              path="/dashboard/:id"
-              render={(routeProps) => <HeaderTokenBalance {...routeProps} />}
-            />
+            {/*<Route*/}
+            {/*  path="/dashboard/:id"*/}
+            {/*  render={(routeProps) => <HeaderTokenBalance {...routeProps} />}*/}
+            {/*/>*/}
             <Route path="/cookie">
               <HeaderBalance value=" " />
             </Route>
             <Route path="/privacy">
               <HeaderBalance value=" " />
             </Route>
-            {/*<Route path="/">*/}
-            {/*  <HeaderBalance />*/}
-            {/*</Route>*/}
           </Switch>
+
           <Switch>
             <Route exact path="/">
               <Index connectWeb3={connectWeb3} />
@@ -59,6 +57,7 @@ function Main(props) {
                 web3Global={web3Global}
                 connectWeb3={connectWeb3}
                 setGlobalTotal={setGlobalTotal}
+                globalTotal={globalTotal}
               />
             </Route>
             <Route path="/cookie">
@@ -72,7 +71,7 @@ function Main(props) {
             </Route>
           </Switch>
 
-          {/*<Footer />*/}
+          <Footer />
         </main>
       </Router>
     </ApolloProvider>

@@ -1,33 +1,102 @@
 @import "page-index"
+@import "page-account"
+@import "page-dashboard"
 
-.index
-  //margin-top: -2rem
-  & + .footer
-    padding-top: 5.9rem
-    width: calc(100% + 8rem)
-    margin-left: -4rem
-    padding-left: 4rem
-    padding-right: 4rem
-    background: url("../../img/bg-2.jpg") top center
-    background-size: cover
-  .section
-    &:nth-child(1)
-      padding-top: 1px
-    &:nth-child(3)
-      padding-top: 1px
-      .title
-        letter-spacing: -0.045em
-    &:nth-child(4)
-      padding-top: 3.4rem
-      .section__header
-        padding: 0 0 0 5px
-        margin-bottom: -1px
-    &:nth-child(5)
-      padding-top: 2.1rem
-    &:nth-child(6)
-      padding-top: 6.7rem
-    &__header
-      margin-bottom: 0
+.SectionBrands
+  padding: 0
+
+  .section__header
+    +flex(row nowrap, center, center)
+    height: 24.4rem
+    background: url("../../img/bg.png") repeat top left
+
+    & .title
+      text-transform: uppercase
+      font-size: 4.8rem
+      letter-spacing: 0.195em
+      color: #DBDBDB
+
+  .section__hint
+    +flex(row nowrap, center, center)
+    color: #C2C2C2
+    margin-top: 5.7rem
+    margin-bottom: 12rem
+    font-size: 2.2rem
+    text-transform: capitalize
+    letter-spacing: 0.07em
+
+  .brands
+    border: none
+    width: 100%
+    display: flex
+    +flex(row nowrap, center, center)
+
+  .brands__grid
+    max-width: 900px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+
+  .brands__item
+    border: none
+
+
+.SecurityAudit
+  color: white
+  margin-bottom: 10rem
+  +flex(row nowrap, center, center)
+  .section__content
+    max-width: 1070px
+  .section__header .title
+    font-size: 3rem
+    letter-spacing: 0.08em!important
+    flex-basis: 1070px
+    margin-bottom: 3rem
+  .information
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+  .information__title, .information__text
+    font-weight: 300
+  .information__item
+    border-right: none
+    flex: 1 0 50%
+
+
+.HowItWorks
+  +flex(column nowrap, center, center)
+  color: white
+  background: #343434
+  & .title
+    margin-top: 8rem
+    text-align: center
+    font-weight: 600
+    letter-spacing: 0.19em
+    font-size: 2.4rem
+    text-transform: uppercase
+  .steps__container
+    max-width: 1300px
+  .steps
+    max-width: none
+  .step__row
+    align-items: center
+  .step__number
+    color: #FBD039
+    letter-spacing: 0.19em
+    font-weight: bold
+    font-size: 4.6rem
+    margin-bottom: 2rem
+  .step__title
+    white-space: nowrap
+    color: white
+    font-size: 2rem
+    letter-spacing: 0.15em
+    text-transform: uppercase
+  .step__description
+    font-size: 1.6rem
+    margin-left: 20rem
+  .step
+    border-bottom: 1px solid #4F4F4F
+    padding: 7rem
+
 
 
 @import "media"

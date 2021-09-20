@@ -82,11 +82,6 @@ const TokenTableInfo = (props) => {
           <th rowSpan={2}>Amount</th>
           <th rowSpan={2}>Invested amount, USDT</th>
           <th rowSpan={2}>AVG purchase price</th>
-          <th className="_large" colSpan={5}>
-            Current value
-          </th>
-        </tr>
-        <tr>
           <th>Token price</th>
           <th>Portfolio value, USDT</th>
           <th>Profit/Loss, USDT</th>

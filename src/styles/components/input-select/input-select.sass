@@ -37,5 +37,25 @@
     padding: 0 1rem
   & .select__value
     margin-right: 10px
+  & .select__value, & .select__option
     font-size: 1.2rem
     font-weight: bold
+    user-select: none
+    z-index: 1000
+  & .select__options
+    padding-top: 2rem
+    top: calc(100% - 1rem)
+    width: 100%
+    box-shadow: none
+    background-color: #EFEFEF
+    border-radius: 5px
+  & .select__option
+    padding-left: 1rem
+
+
+
+
+.TokenRequestInputLabel
+  line-height: 3.4rem
+  color: #7E7E7E
+  font-size: 1.4rem

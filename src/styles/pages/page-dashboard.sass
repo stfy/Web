@@ -1,0 +1,35 @@
+.PageDashboard
+  .section
+    padding-top: 0
+  .section__header
+    +flex(row nowrap, center, center)
+    height: 10rem
+    background: rgba(52, 52, 52, 0.5)
+    .title
+      font-size: 2.6rem
+      font-weight: 600
+      letter-spacing: 0.2em
+      font-variant: small-caps
+      text-transform: uppercase
+      color: white
+  .section__breadcrumbs
+      +flex(row nowrap, center, center)
+  .breadcrumbs
+    color: #ffffff
+    height: 4.5rem
+    &__item
+      text-decoration: none
+      font-weight: 300
+      position: relative
+      & span
+        border: none
+      & div
+        margin: 0
+        top: 20px
+  .page-index__wrapper
+    height: 42rem
+  .page-index__title
+    margin-top: 5rem
+  .page-index__title__total-price
+    margin-top: 10rem
+

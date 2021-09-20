@@ -20,46 +20,66 @@ function TokenRequestEmbedded(props) {
   return (
     <>
       <div style={{ display: "flex" }}>
-        <div className="TokenRequestInputSelect input-select ">
-          <input
-            className="input _token-request"
-            type="text"
-            required
-            value={requestedAmount}
-            onChange={(e) =>
-              setRequestedAmount(Number.parseFloat(e.target.value))
-            }
-          />
-          <Select
-            value={requestedToken}
-            setValue={setRequestedToken}
-            options={[requestedToken]}
-            valueDisplay={(token) => tokenInfo[token].symbol}
-            valueImage={(_) => "logo"}
-          />
+        <div>
+          <label
+            htmlFor={"receive-" + requestedToken}
+            className="TokenRequestInputLabel"
+          >
+            Receive
+          </label>
+
+          <div className="TokenRequestInputSelect input-select ">
+            <input
+              id={"receive-" + requestedToken}
+              className="input _token-request"
+              type="text"
+              required
+              value={requestedAmount}
+              onChange={(e) =>
+                setRequestedAmount(Number.parseFloat(e.target.value))
+              }
+            />
+            <Select
+              value={requestedToken}
+              setValue={setRequestedToken}
+              options={[requestedToken]}
+              valueDisplay={(token) => tokenInfo[token].symbol}
+              valueImage={(_) => "logo"}
+            />
+          </div>
         </div>
-        <div className="TokenRequestInputSelect input-select flex-grow">
-          <input
-            className="input _token-request"
-            type="text"
-            required
-            value={offeredAmount}
-            onChange={(e) =>
-              setOfferedAmount(Number.parseFloat(e.target.value))
-            }
-          />
-          <Select
-            value={offeredToken}
-            setValue={setOfferedToken}
-            options={currencies}
-            valueDisplay={(currency) => currencyInfo[currency].symbol}
-            valueImage={(currency) => currencyInfo[currency].image}
-          />
+        <div>
+          <label
+            htmlFor={"for-" + requestedToken}
+            className="TokenRequestInputLabel"
+          >
+            For
+          </label>
+          <div className="TokenRequestInputSelect input-select flex-grow">
+            <input
+              className="input _token-request"
+              id={"for-" + requestedToken}
+              type="text"
+              required
+              value={offeredAmount}
+              onChange={(e) =>
+                setOfferedAmount(Number.parseFloat(e.target.value))
+              }
+            />
+            <Select
+              value={offeredToken}
+              setValue={setOfferedToken}
+              options={currencies}
+              valueDisplay={(currency) => currencyInfo[currency].symbol}
+              valueImage={(currency) => currencyInfo[currency].image}
+            />
+          </div>
         </div>
 
         <a
           className={
-            "button _full" + (canPerformTokenRequest ? "" : " _disabled")
+            "TokenRequestInputButton button _full" +
+            (canPerformTokenRequest ? "" : " _disabled")
           }
           href
           onClick={performTokenRequest}

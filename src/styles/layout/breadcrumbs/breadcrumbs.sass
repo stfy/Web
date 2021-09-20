@@ -1,7 +1,16 @@
 .breadcrumbs
   +flex(row wrap, flex-start, baseline)
   font-size: 2rem
+  &__delimiter
+    display: inline-block
+    width: 1px
+    height: 100%
+    margin: 0 1rem
+    position: absolute
+    top: 0
+    background: white
   &__item
+    padding-right: 25px
     transition: all 0.3s
     margin-bottom: 5px
     span
@@ -10,8 +19,9 @@
       color: var(--color5)
 
     &:last-child
-      div
-        display: none
+
+      .breadcrumbs__delimiter
+        display: none!important
     &.active
       font-weight: 600
 

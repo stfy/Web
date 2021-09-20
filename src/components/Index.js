@@ -13,10 +13,10 @@ function Index(props) {
     <div className="index">
       <Title />
       <AssetTable connectWeb3={connectWeb3} />
-      {/*<Brands />*/}
+      <Brands />
       {/*<Audit />*/}
-      {/*<AuditAbout />*/}
-      {/*<HowItWorks />*/}
+      <AuditAbout />
+      <HowItWorks />
     </div>
   );
 }
