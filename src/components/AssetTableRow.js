@@ -48,18 +48,18 @@ function AssetTableRow(props) {
             <span>{tableName}</span>
           </div>
         </div>
-        <div className="main-table__td">
-          {legacy ? (
-            <TokenPriceLegacy tokenAddress={address} />
-          ) : (
-            <TokenPrice tokenAddress={address} />
-          )}
-        </div>
-        <div className="main-table__td">
+        <div className="main-table__td desktop_only">
           {legacy ? (
             <APYLegacy tokenAddress={address} decimals={0} />
           ) : (
             <APY tokenAddress={address} decimals={0} />
+          )}
+        </div>
+        <div className="main-table__td desktop_only">
+          {legacy ? (
+            <TokenPriceLegacy tokenAddress={address} />
+          ) : (
+            <TokenPrice tokenAddress={address} />
           )}
         </div>
         <div className="main-table__td">

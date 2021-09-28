@@ -25,7 +25,9 @@ function Main(props) {
       <Router>
         <main className="main">
           <SidebarActivation />
+
           <Sidebar />
+
           <Header address={address} connectWeb3={connectWeb3} />
 
           <Switch>

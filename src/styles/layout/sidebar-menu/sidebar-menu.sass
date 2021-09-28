@@ -52,4 +52,55 @@
   &__activation
     display: none
 
+
+.sidebar-menu--mobile
+  width: 100vw
+  min-width: 100vw
+  left: 0!important
+  height: calc(100vh - 7rem)
+  box-shadow: none
+  display: block!important
+  transform: none
+  top: -100%
+  .sidebar-nav
+    +flex(column, center, center)
+
+    margin-top: 10rem
+    letter-spacing: 0.21em
+    font-size: 2rem
+    text-transform: uppercase
+    color: #ffffff
+
+    &__item
+      margin-bottom: 2rem
+      padding: 12px 47px
+
+      &--bordered
+        border: 1px solid #FBD039
+        border-radius: 7px
+        padding: 12px 47px
+  .select-lang
+    display: flex
+    margin-top: 5rem
+    +flex(row nowrap, center, center)
+
+.select-lang__item
+  margin-left: 10px
+  cursor: pointer
+  &--active
+    border-bottom: 1px solid white
+    font-weight: 500
+
+.try-email
+  margin-top: 5rem
+  +flex(row nowrap, center, center)
+  &__icon
+    margin-right: 2rem
+    font-size: 14px
+    font-weight: 400
+
+.sidebar-logo
+  +flex(row nowrap, center, center)
+  margin-top: 8rem
+
 @import "media"

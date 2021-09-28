@@ -1,7 +1,7 @@
 import React from "react";
 import { legacyTokenAddresses, tokenAddresses } from "./data/tokens";
 import TotalPrice from "./widgets/TotalPrice";
-import DAOAMainLogo from "./MainLogo";
+import DAOAMainLogo, { DAOMainLogoMobile } from "./MainLogo";
 
 class Title extends React.Component {
   render() {
@@ -9,9 +9,14 @@ class Title extends React.Component {
       <section className="section" style={{ padding: 0 }}>
         <div className="section__header">
           <div className="page-index__wrapper">
-            <div className="page-index__title">
+            <div className="page-index__title container">
               <div className="page-index__title-left">
-                <DAOAMainLogo />
+                <div className="page-index__main-logo">
+                  <DAOAMainLogo />
+                </div>
+                <div className="page-index__main-logo--mobile">
+                  <DAOMainLogoMobile />
+                </div>
               </div>
 
               <div className="page-index__title-right">

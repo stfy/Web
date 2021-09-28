@@ -3,8 +3,8 @@
   color: white
   position: sticky
   top: 0
-  z-index: 5
-  height: 5.5rem
+  z-index: 1000
+  height: 7rem
   background: #222222
   &._scroll
     pointer-events: none
@@ -15,7 +15,9 @@
   &__menu
     +flex(row nowrap, space-beetwen, center)
     width: 100%
+    display: none
     &-links
+      display: none
       flex: 1 0 70%
       margin-right: 0
       +flex(row nowrap, space-around, center)
@@ -44,6 +46,11 @@
     font-size: 14px
     letter-spacing: -0.01em
   &__sidebar-open
-    display: none
+    display: block
+    padding: 0 2rem
+    top: 2px
+    @media (min-width: 768px)
+      display: none
+
 
 @import "media"

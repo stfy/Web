@@ -19,7 +19,7 @@ function TokenRequestEmbedded(props) {
 
   return (
     <>
-      <div style={{ display: "flex" }}>
+      <div>
         <div>
           <label
             htmlFor={"receive-" + requestedToken}

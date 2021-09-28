@@ -28,10 +28,12 @@
         text-align: left
       &:last-child
         text-align: right
-        position: absolute
-        right: 3rem
-        top: 2rem
         padding: 0
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        position: relative!important
+        top: 10px
       &[data-title]
         &:before
           content: attr(data-title)

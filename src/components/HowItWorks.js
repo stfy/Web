@@ -9,12 +9,9 @@ class HowItWorks extends React.Component {
         <div className="steps__container">
           <div className="steps _centered">
             <div className="step">
+              <div className="step__number">01</div>
               <div className="step__row">
-                <div className="step__left">
-                  <div className="step__number">01</div>
-
-                  <div className="step__title">Chоose your strategy</div>
-                </div>
+                <div className="step__title">Chоose your strategy</div>
                 <div className="step__description">
                   <p>
                     Build your portfolio with different allocation strategies

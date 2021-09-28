@@ -97,8 +97,12 @@
         &:first-child,
         &:nth-child(2)
           text-align: left
+
+.offer-grid__cell, .offer-grid__head
+  padding: 0 4rem
+
 .offer-grid
-  display: grid
+  //display: grid
   grid-template-columns: repeat(3, 1fr)
   color: #383434
   font-size: 1.6rem
@@ -109,21 +113,51 @@
   border-radius: 27px
   padding-top: 4rem
   margin-top: -4rem
+  display: none
+  @media (min-width: 768px)
+    display: grid
+    padding: 4rem 0
+    padding-right: 10rem
+    line-height: 2rem
+  &--mobile
+    display: flex
+    flex-direction: column
+    color: #000000
+    border-radius: 0
+    .offer-grid__head
+      font-size: 3rem
+    .offer-grid__cell
+      font-size: 2rem
+    .offer-grid__cell, .offer-grid__head
+      padding: 0
+    @media (min-width: 768px)
+      display: none
 
-.offer-grid__cell, .offer-grid__head
-  padding: 2.5rem 0 2.5rem 2rem
+
+
+
 
 .offer-request-wrapper
-  +flex(row wrap, center, center)
+  +flex(column wrap, center, center)
+
+.offer-request__title
+  letter-spacing: 0.05em
+  font-size: 3rem
+  color: #696969
+  text-transform: uppercase
+  margin-top: 3rem
 
 .offer-request
   max-width: 100rem
-  padding: 4rem
+  padding: 2rem
   background: #fff
-  box-shadow: 2px 4px 4px 5px rgba(77, 71, 53, 0.03)
-  border-radius: 50px
   margin-top: 1rem
   margin-bottom: 10rem
-
+  @media (min-width: 768px)
+    box-shadow: 2px 4px 4px 5px rgba(77, 71, 53, 0.03)
+    border-radius: 50px
+    padding: 4rem
+    & > div
+      display: flex
 
 @import "media"

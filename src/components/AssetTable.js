@@ -16,10 +16,7 @@ function AssetTable(props) {
   }, [location]);
 
   return (
-    <div
-      className="section main-table"
-      style={{ paddingTop: 0, marginTop: "-10rem" }}
-    >
+    <div className="section main-table">
       <AssetTableHeader />
 
       <div className="main-table__asset_wrapper">

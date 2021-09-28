@@ -4,12 +4,14 @@
 
 .SectionBrands
   padding: 0
-
+  display: none
+  @media (min-width: 768px)
+    display: block
+    top: -10rem
   .section__header
     +flex(row nowrap, center, center)
     height: 24.4rem
     background: url("../../img/bg.png") repeat top left
-
     & .title
       text-transform: uppercase
       font-size: 4.8rem
@@ -30,20 +32,21 @@
     width: 100%
     display: flex
     +flex(row nowrap, center, center)
-
   .brands__grid
     max-width: 900px
     display: grid
     grid-template-columns: repeat(3, 1fr)
-
   .brands__item
     border: none
 
 
 .SecurityAudit
+  +flex(row nowrap, center, center)
+  display: none
   color: white
   margin-bottom: 10rem
-  +flex(row nowrap, center, center)
+  @media (min-width: 768px)
+    display: flex
   .section__content
     max-width: 1070px
   .section__header .title
@@ -72,30 +75,44 @@
     letter-spacing: 0.19em
     font-size: 2.4rem
     text-transform: uppercase
+    @media (min-width: 768px)
+      text-align: left
   .steps__container
     max-width: 1300px
   .steps
     max-width: none
   .step__row
     align-items: center
+    @media (min-width: 768px)
+      display: flex
   .step__number
     color: #FBD039
     letter-spacing: 0.19em
     font-weight: bold
     font-size: 4.6rem
     margin-bottom: 2rem
+
   .step__title
-    white-space: nowrap
     color: white
     font-size: 2rem
     letter-spacing: 0.15em
     text-transform: uppercase
+    width: 100%
+    @media (min-width: 768px)
+      flex: 1 0 50%
+      white-space: normal
   .step__description
     font-size: 1.6rem
-    margin-left: 20rem
+    @media (min-width: 768px)
+      //margin-left: 20rem
+      flex: 1 0 50%
   .step
     border-bottom: 1px solid #4F4F4F
     padding: 7rem
+    text-align: center
+    @media (min-width: 768px)
+      text-align: left
+
 
 
 
