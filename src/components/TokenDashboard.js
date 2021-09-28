@@ -9,6 +9,7 @@ import TokenPriceGraph from "./widgets/TokenPriceGraph";
 import TokenAmountGraph from "./widgets/TokenAmountGraph";
 import PortfolioPartsGraph from "./widgets/PortfolioPartsGraph";
 import PortfolioParts from "./widgets/PortfolioParts";
+import TokenCarry from "./widgets/TokenCarry";
 
 function TokenDashboard(props) {
   const token = props.match.params.id;
@@ -25,7 +26,7 @@ function TokenDashboard(props) {
   return (
     <>
       {enableCarry ? (
-        <div class="info-carry">
+        <div className="info-carry">
           Accumulated Carry:{" "}
           <TokenCarry
             tokenAddress={tokenAddress}

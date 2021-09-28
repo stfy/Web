@@ -148,16 +148,23 @@
   margin-top: 3rem
 
 .offer-request
-  max-width: 100rem
   padding: 2rem
   background: #fff
   margin-top: 1rem
   margin-bottom: 10rem
+  @media (min-width: 1220px)
+    max-width: 100rem
+
   @media (min-width: 768px)
     box-shadow: 2px 4px 4px 5px rgba(77, 71, 53, 0.03)
     border-radius: 50px
     padding: 4rem
     & > div
       display: flex
+      @media (max-width: 1023px)
+        flex-direction: column
+      .TokenRequestInputSelect
+        @media (max-width: 1023px)
+          margin-bottom: 2rem
 
 @import "media"

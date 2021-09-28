@@ -1,9 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Media from "react-media";
 
 function Sidebar(props) {
   const { isBlocked } = props;
-  return (
+
+  const mobile = (
     <aside className="sidebar-menu sidebar-menu--mobile">
       <div className="sidebar-nav">
         <div className="sidebar-nav__item">Главная</div>
@@ -112,7 +114,7 @@ function Sidebar(props) {
     </aside>
   );
 
-  return (
+  const desktop = (
     <aside className="sidebar-menu">
       <label className="sidebar-menu__close" htmlFor="sidebar-menu-activation">
         <i className="icon icon-close" />
@@ -135,6 +137,13 @@ function Sidebar(props) {
         ""
       )}
     </aside>
+  );
+
+  return (
+    <>
+      <Media query={`(min-width: 768px)`} render={() => desktop} />
+      <Media query={`(max-width: 767px)`} render={() => mobile} />
+    </>
   );
 }
 

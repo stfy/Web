@@ -13,9 +13,10 @@
     .header__main
       opacity: 0
   &__menu
-    +flex(row nowrap, space-beetwen, center)
     width: 100%
     display: none
+    @media (min-width: 768px)
+      +flex(row nowrap, space-beetwen, center)
     &-links
       display: none
       flex: 1 0 70%
@@ -47,7 +48,7 @@
     letter-spacing: -0.01em
   &__sidebar-open
     display: block
-    padding: 0 2rem
+    padding: 0 3rem
     top: 2px
     @media (min-width: 768px)
       display: none
