@@ -26,8 +26,8 @@ function AssetTableRow(props) {
     if (
       myRef &&
       location.hash &&
-      location.hash.endsWith("#flex") &&
-      tokenName === "flex"
+      location.hash.endsWith("#afford") &&
+      tokenName === "afford"
     ) {
       setTimeout(() => {
         if (myRef.current) {

@@ -42,7 +42,7 @@ function Footer(props) {
             <Link className="button _light" to="/dashboard">
               Dashboard
             </Link>
-            <Link className="button" to="/#flex">
+            <Link className="button" to="/#afford">
               Join Dao
             </Link>
           </div>

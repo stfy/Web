@@ -10,8 +10,8 @@ function AssetTable(props) {
   const [open, setOpen] = useState();
   const location = useLocation();
   useEffect(() => {
-    if (location.hash && location.hash.endsWith("#flex")) {
-      setOpen("flex");
+    if (location.hash && location.hash.endsWith("#afford")) {
+      setOpen("afford");
     }
   }, [location]);
 

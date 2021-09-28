@@ -62,8 +62,12 @@ export const useTokenData = (
   useEffect(() => {
     const fn = async () => {
       console.log(`Getting carry`);
-      const carryData = await fetchCarry(tokenAddress);
-      setCarryData(carryData);
+      try {
+        const carryData = await fetchCarry(tokenAddress);
+        setCarryData(carryData);
+      } catch (e) {
+        setCarryData([]);
+      }
     };
     fn();
   }, [tokenAddress]);

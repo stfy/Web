@@ -3,7 +3,7 @@ import { nameByAddress, tokenInfo } from "../data/tokens";
 
 const INITIAL_CARRY_DAYID = 18668;
 const INITIAL_CARRY = {
-  flex: {
+  afford: {
     price: 1.587841891,
     totalCarry: 29767.91,
   },
@@ -37,13 +37,12 @@ const checkIsLastDay = (dt) => {
 
 export const fetchCarry = async (tokenAddress) => {
   const name = nameByAddress(tokenAddress);
-  //console.log(`fetchCarry: Got name by address: ${name}`);
   return await fetchDedupe(`/carry/${name}`)
     .then((res) => {
-      //console.log(`fetchCarry: ${JSON.stringify(res)}`);
       return res;
     })
-    .then((res) => res.data);
+    .then((res) => res.data)
+    .catch((_) => []);
 };
 
 export const computeCarry = (tokenAddress, mergedRaw, recvCarry) => {

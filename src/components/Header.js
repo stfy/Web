@@ -69,7 +69,7 @@ function Header(props) {
 
             <Link
               className="header__menu-item header__menu-item--bordered"
-              to="/#flex"
+              to="/#afford"
             >
               Join Dao
             </Link>

@@ -66,7 +66,7 @@ function Dashboard(props) {
               />
             )}
           />
-          <Redirect from="/dashboard" to="/dashboard/flex" />
+          <Redirect from="/dashboard" to="/dashboard/afford" />
         </Switch>
       </section>
     </div>
