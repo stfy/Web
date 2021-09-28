@@ -19,6 +19,7 @@ const Application = () => {
   const [web3Global, setweb3Global] = useState(null);
   const [address, setAddress] = useState(null);
   const [countryCode, setCountryCode] = useState(null);
+
   const connectWeb3 = useCallback(async () => {
     const provider = await web3Modal.connect();
     const web3 = new Web3(provider);
@@ -38,13 +39,15 @@ const Application = () => {
 
   useEffect(() => {
     const fn = async () => {
-      const geo = await fetch("http://ip-api.com/json").then((res) =>
-        res.json()
-      );
-      setCountryCode(geo.countryCode);
+      if (!countryCode) {
+        const geo = await fetch(
+          "https://api.ipgeolocation.io/ipgeo?apiKey=aafb8b776cde407aacde27b6ee55b018"
+        ).then((res) => res.json());
+        setCountryCode(geo.country_code2);
+      }
     };
     fn();
-  });
+  }, [countryCode]);
 
   return (
     <>

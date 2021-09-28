@@ -16,4 +16,28 @@ module.exports = function (app) {
       changeOrigin: true,
     })
   );
+
+  app.use(
+    "/carry",
+    createProxyMiddleware({
+      target: "https://data.berezka.io",
+      changeOrigin: true,
+    })
+  );
+
+  app.use(
+    "/price",
+    createProxyMiddleware({
+      target: "https://data.berezka.io",
+      changeOrigin: true,
+    })
+  );
+
+  app.use(
+    "/rawprice",
+    createProxyMiddleware({
+      target: "https://data.berezka.io",
+      changeOrigin: true,
+    })
+  );
 };

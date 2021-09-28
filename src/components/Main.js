@@ -13,6 +13,7 @@ import Account from "./Account";
 import TokenRequest from "./TokenRequest";
 import CookiePolicy from "./CookiePolicy";
 import PrivacyPolicy from "./PrivacyPolicy";
+import ReferralHandler from "./ReferralHandler";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "./graphClient";
 
@@ -23,6 +24,7 @@ function Main(props) {
   return (
     <ApolloProvider client={client}>
       <Router>
+        <ReferralHandler />
         <main className="main">
           <SidebarActivation />
 
@@ -48,7 +50,7 @@ function Main(props) {
 
           <Switch>
             <Route exact path="/">
-              <Index connectWeb3={connectWeb3} />
+              <Index connectWeb3={connectWeb3} web3Global={web3Global} />
             </Route>
             <Route path="/dashboard">
               <Dashboard web3Global={web3Global} address={address} />
