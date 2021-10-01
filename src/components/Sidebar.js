@@ -120,7 +120,7 @@ function Sidebar(props) {
         <i className="icon icon-close" />
       </label>
       <div className="sidebar-menu__logo">
-        <a href="http://berezka.io">
+        <a href="/">
           <SidebarLogo />
         </a>
       </div>

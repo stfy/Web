@@ -50,6 +50,7 @@
   .section__content
     max-width: 1070px
   .section__header .title
+    font-weight: 500
     font-size: 3rem
     letter-spacing: 0.08em!important
     flex-basis: 1070px
@@ -57,11 +58,16 @@
   .information
     display: grid
     grid-template-columns: repeat(2, 1fr)
+    column-gap: 70px
   .information__title, .information__text
     font-weight: 300
   .information__item
     border-right: none
     flex: 1 0 50%
+    line-height: 1.43
+    & b
+      font-weight: bold
+
 
 
 .HowItWorks
@@ -104,15 +110,20 @@
   .step__description
     font-size: 1.6rem
     @media (min-width: 768px)
-      //margin-left: 20rem
       flex: 1 0 50%
   .step
     border-bottom: 1px solid #4F4F4F
-    padding: 7rem
+    padding: 7rem 9rem
     text-align: center
     @media (min-width: 768px)
       text-align: left
 
+
+
+.PolicyPage
+  &.policy
+    color: #FFFFFF
+    padding: 10rem
 
 
 

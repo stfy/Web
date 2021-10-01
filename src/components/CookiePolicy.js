@@ -3,7 +3,7 @@ import React from "react";
 class CookiePolicy extends React.Component {
   render() {
     return (
-      <div className="policy">
+      <div className="policy PolicyPage">
         <section className="section" style={{ paddingLeft: "190px" }}>
           <div className="section__header">
             <h1 className="title" style={{ marginLeft: "-190px" }}>

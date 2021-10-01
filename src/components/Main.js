@@ -40,12 +40,6 @@ function Main(props) {
             {/*  path="/dashboard/:id"*/}
             {/*  render={(routeProps) => <HeaderTokenBalance {...routeProps} />}*/}
             {/*/>*/}
-            <Route path="/cookie">
-              <HeaderBalance value=" " />
-            </Route>
-            <Route path="/privacy">
-              <HeaderBalance value=" " />
-            </Route>
           </Switch>
 
           <Switch>

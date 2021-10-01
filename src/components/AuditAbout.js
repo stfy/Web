@@ -12,8 +12,8 @@ class AuditAbout extends React.Component {
           <div className="information">
             <div className="information__item">
               <div className="information__title">
-                Berezka DAO is a decentralized autonomous organization based on
-                Aragon.
+                <b>Berezka DAO</b> is a decentralized autonomous organization
+                based on Aragon.
               </div>
               <div className="information__title">
                 Aragon Smart Contract Audits

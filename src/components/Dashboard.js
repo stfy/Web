@@ -7,6 +7,7 @@ import DAOAMainLogo from "./MainLogo";
 import TotalPrice from "./widgets/TotalPrice";
 import { legacyTokenAddresses, tokenAddresses, tokenInfo } from "./data/tokens";
 import TokenPrice from "./widgets/TokenPrice";
+import OnChainValidation from "./OnChainValidation";
 
 function Dashboard(props) {
   const { web3Global, address } = props;
@@ -44,6 +45,8 @@ function Dashboard(props) {
                   />
                 )}
               </div>
+
+              {token && <OnChainValidation requestedToken={token} />}
             </div>
           </div>
         </div>
