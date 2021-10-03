@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Main from "./Main";
 import Web3 from "web3";
 import Web3Modal from "web3modal";
@@ -44,6 +44,12 @@ const Application = () => {
           "https://api.ipgeolocation.io/ipgeo?apiKey=aafb8b776cde407aacde27b6ee55b018"
         ).then((res) => res.json());
         setCountryCode(geo.country_code2);
+
+        const geocode = geo.country_code2.toString().toLowerCase();
+
+        if (!localStorage.getItem("lang") && ["ru", "en"].includes(geocode)) {
+          localStorage.setItem("lang", geocode);
+        }
       }
     };
     fn();

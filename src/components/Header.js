@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation, withTranslation } from "react-i18next";
+import { tokenInfo } from "./data/tokens";
+import Select from "./Select";
 
 function formatAddress(address) {
   return address.slice(0, 5) + "..." + address.slice(-5);
@@ -8,6 +11,19 @@ function formatAddress(address) {
 function Header(props) {
   const { connectWeb3, address } = props;
   const [scroll, setScroll] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const defaultLang = React.useMemo(() => {
+    return localStorage.getItem("lang") || "en";
+  }, []);
+
+  const [lang, setLang] = useState(defaultLang);
+
+  const changeLang = (lang) => {
+    i18n.changeLanguage(lang);
+
+    localStorage.setItem("lang", lang);
+  };
 
   useEffect(
     () =>
@@ -39,21 +55,21 @@ function Header(props) {
         <nav className="header__menu">
           <div className={"header__menu-links"}>
             <Link className="header__menu-item" to="/">
-              About us
+              {t("header.About Us")}
             </Link>
             <Link className="header__menu-item" to="/">
-              Strategies
+              {t("header.Strategies")}
             </Link>
             <a
               className="header__menu-item"
               target="_blank"
               href="https://medium.com/berezka-dao"
             >
-              How It Works
+              {t("header.How it Works")}
             </a>
 
             <Link className="header__menu-item" to="/dashboard">
-              Dashboard
+              {t("header.Dashboard")}
             </Link>
           </div>
 
@@ -68,7 +84,7 @@ function Header(props) {
                 </div>
               ) : (
                 <a className="header__menu-item" onClick={connectWeb3}>
-                  Connect wallet
+                  {t("header.Connect Wallet")}
                 </a>
               )}
             </div>
@@ -77,8 +93,21 @@ function Header(props) {
               className="header__menu-item header__menu-item--bordered"
               to="/#afford"
             >
-              Join Dao
+              {t("header.Join DAO")}
             </Link>
+
+            <div className={"header__lang"}>
+              <Select
+                value={lang}
+                setValue={(t) => {
+                  setLang(t);
+                  changeLang(t);
+                }}
+                options={["ru", "en"]}
+                valueDisplay={(token) => token.toString().toUpperCase()}
+                valueImage={(_) => "logo"}
+              />
+            </div>
           </div>
         </nav>
         {/*<div className="desktop_only header__title">*/}
@@ -97,4 +126,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default withTranslation()(Header);
