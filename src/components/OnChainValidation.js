@@ -17,7 +17,7 @@ function OnChainValidation(props) {
             <a
               target="_blank"
               key={index}
-              href={`https://app.zerion.io/${vault}/overview`}
+              href={`https://debank.com/profile/${vault}`}
             >
               Wallet
               {tokenInfo[requestedToken].vaults.length === 1
