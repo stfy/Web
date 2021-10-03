@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { colorByIndex } from "./colors";
-import { fetchWeb3Data } from "./fetchWeb3";
+import { fetchFolio } from "./fetchFolio";
 
 const PortfolioParts = (props) => {
-  const { tokenAddress, web3 } = props;
+  const { tokenAddress } = props;
 
   const [loading, setLoading] = useState(true);
   const [partList, setPartList] = useState();
@@ -13,11 +13,8 @@ const PortfolioParts = (props) => {
 
     const fn = async () => {
       setLoading(true);
-      if (!web3) {
-        return;
-      }
 
-      const pricePercent = await fetchWeb3Data(web3, tokenAddress);
+      const pricePercent = await fetchFolio(tokenAddress);
 
       if (!isCancelled) {
         setLoading(false);
@@ -29,7 +26,7 @@ const PortfolioParts = (props) => {
     return () => {
       isCancelled = true;
     };
-  }, [tokenAddress, web3]);
+  }, [tokenAddress]);
 
   if (!partList || loading) {
     return <p>Loading...</p>;
