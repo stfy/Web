@@ -1,9 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Media from "react-media";
+import { useTranslation } from "react-i18next";
 
 function Sidebar(props) {
   const { isBlocked } = props;
+
+  const { t } = useTranslation();
 
   const mobile = (
     <aside className="sidebar-menu sidebar-menu--mobile">
@@ -127,10 +130,10 @@ function Sidebar(props) {
       {!isBlocked ? (
         <nav className="sidebar-menu__items">
           <NavLink className="sidebar-menu__item" to="/account">
-            My Account
+            {t("sidebar.My Account")}
           </NavLink>
           <NavLink className="sidebar-menu__item" to="/dashboard">
-            Dashboard
+            {t("sidebar.Dashboard")}
           </NavLink>
         </nav>
       ) : (

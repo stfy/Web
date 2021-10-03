@@ -1,15 +1,18 @@
 import React from "react";
+import { withTranslation } from "react-i18next";
 
 class Brands extends React.Component {
   render() {
+    const { t } = this.props;
+
     return (
       <section className="section SectionBrands">
         <div className="section__header">
-          <h2 className="title">Don't Trust — Verify</h2>
+          <h2 className="title">{t("index.Dont Trust - Verify")}</h2>
         </div>
 
         <div className="section__hint">
-          We are using these audited protocols
+          {t("We are using these audited protocols")}
         </div>
 
         <div className="brands">
@@ -117,4 +120,4 @@ class Brands extends React.Component {
   }
 }
 
-export default Brands;
+export default withTranslation()(Brands);

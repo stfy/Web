@@ -7,6 +7,26 @@
   height: 7rem
   background: #222222
 
+  &__lang
+    .select__value
+      font-size: 10px
+      line-height: 12px
+      font-weight: 600
+      letter-spacing: 0.05em
+      color: #FFFFFF
+    .select__options
+      background: #222222
+      top: 80%
+    .select__option
+      font-size: 10px
+      line-height: 12px
+      font-weight: 400
+      letter-spacing: 0.05em
+      color: #FFFFFF
+    .select__input-container::after
+      font-size: 5px!important
+
+
   @media (min-width: 768px)
     height: 5.5rem
   &._scroll
@@ -21,12 +41,11 @@
     @media (min-width: 768px)
       +flex(row nowrap, space-beetwen, center)
     &-links
-      display: none
-      flex: 1 0 70%
+      flex: 1
       margin-right: 0
       +flex(row nowrap, space-around, center)
     &-actions
-      flex: 1 0 30%
+      flex: 1
       margin-right: 0
       +flex(row nowrap, space-around, center)
   &__main
@@ -39,6 +58,7 @@
     cursor: pointer
     margin-right: 2.3rem
     transition: all 0.3s
+    white-space: nowrap
     &--bordered
       border-radius: 7px
       padding: 7px 45px

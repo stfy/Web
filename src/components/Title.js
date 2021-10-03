@@ -2,9 +2,12 @@ import React from "react";
 import { legacyTokenAddresses, tokenAddresses } from "./data/tokens";
 import TotalPrice from "./widgets/TotalPrice";
 import DAOAMainLogo, { DAOMainLogoMobile } from "./MainLogo";
+import { withTranslation } from "react-i18next";
 
 class Title extends React.Component {
   render() {
+    const { t } = this.props;
+
     return (
       <section className="section" style={{ padding: 0 }}>
         <div className="section__header">
@@ -27,19 +30,13 @@ class Title extends React.Component {
                   />
                 </div>
                 <div className="page-index__title__total-price-label">
-                  TOTAL VALUE OF ASSETS
+                  {t("index.TOTAL VALUE OF ASSETS")}
                 </div>
 
-                <p className="page-index__description">
-                  At present, making investments using DAOs (Decentralized
-                  Autonomous Organizations) is the main way to preserve and
-                  increase your capital.
-                </p>
+                <p className="page-index__description">{t("index.desc")}</p>
 
                 <p className="page-index__description-appendix">
-                  Your finances are managed by experienced finance and
-                  cryptocurrency experts, all fund activities are transparent
-                  and monitored using open protocols.
+                  {t("index.desc-appendix")}
                 </p>
               </div>
             </div>
@@ -50,4 +47,4 @@ class Title extends React.Component {
   }
 }
 
-export default Title;
+export default withTranslation()(Title);

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Footer(props) {
   const { isBlocked } = props;
@@ -72,13 +73,15 @@ function Copyright() {
 }
 
 function Policy() {
+  const { t } = useTranslation();
+
   return (
     <div className="policy">
       <Link className="policy__link" to="/privacy">
-        Privacy Policy
+        {t("index.Privacy Policy")}
       </Link>
       <Link className="policy__link" to="/cookie">
-        Cookie Policy
+        {t("index.Cookie Policy")}
       </Link>
     </div>
   );
