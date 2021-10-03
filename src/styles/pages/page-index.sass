@@ -5,14 +5,17 @@
   +flex(row nowrap, center, flex-start)
   background: url("../../img/bg.png") repeat top left
   padding-bottom: 7rem
+  background-size: cover
   @media (min-width: 768px)
-    height: calc(100vh - 5.5rem)
+    height: calc(100vh + 4.5rem)
     padding-bottom: 0
+    max-height: 76.5rem
 
 .page-index__main-logo
   display: none
   @media (min-width: 768px)
     display: block
+    margin-top: 2rem
   &--mobile
     display: block
     @media (min-width: 768px)
@@ -25,7 +28,7 @@
   max-width: 250px
   &-left
     flex: 1 0 50%
-    +flex(row nowrap, space-around, center)
+    +flex(row nowrap, flex-start, flex-start)
   &-right
     margin-top: 5rem
     flex: 1 0 50%
@@ -46,6 +49,7 @@
   font-weight: 500
   white-space: nowrap
   font-size: 4rem
+  line-height: 1
   @media (min-width: 768px)
     font-size: 9rem
   &-label

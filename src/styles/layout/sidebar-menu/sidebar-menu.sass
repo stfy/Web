@@ -5,7 +5,7 @@
   width: 100vh
   min-width: 100vh
   bottom: -8rem
-  height: 8rem
+  height: 8.3rem
   left: 0
   z-index: 10
   transition: all 0.5s
@@ -31,8 +31,8 @@
     text-transform: uppercase
     font-weight: 300
     background: transparent
-    padding: 10px
-    min-width: 18rem
+    padding: 2rem 2rem
+    letter-spacing: 0.05em
     border: 1px solid
     border-color: transparent
     border-radius: 7px
@@ -43,6 +43,10 @@
   &__logo
     +flex(row nowrap, center, center)
     width: 5.5rem
+    & a
+      margin-right: 10px
+    &  svg
+      transform: rotate(90deg)
   &__logo-img
     transform: rotate(90deg)
     max-height: 100%

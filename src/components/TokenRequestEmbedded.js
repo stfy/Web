@@ -69,7 +69,7 @@ function TokenRequestEmbedded(props) {
   return (
     <>
       <div>
-        <div>
+        <div className={"TokenRequestBlock"}>
           <label
             htmlFor={"receive-" + requestedToken}
             className="TokenRequestInputLabel"
@@ -97,7 +97,7 @@ function TokenRequestEmbedded(props) {
             />
           </div>
         </div>
-        <div>
+        <div className={"TokenRequestBlock"}>
           <label
             htmlFor={"for-" + requestedToken}
             className="TokenRequestInputLabel"
@@ -133,7 +133,7 @@ function TokenRequestEmbedded(props) {
           href
           onClick={performTokenRequest}
         >
-          Create request
+          Deposit
         </a>
       </div>
       {/*{!smallSum && errorMessage && (*/}

@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+function formatAddress(address) {
+  return address.slice(0, 5) + "..." + address.slice(-5);
+}
+
 function Header(props) {
   const { connectWeb3, address } = props;
   const [scroll, setScroll] = useState(false);
@@ -35,17 +39,17 @@ function Header(props) {
         <nav className="header__menu">
           <div className={"header__menu-links"}>
             <Link className="header__menu-item" to="/">
-              Home
+              About us
             </Link>
             <Link className="header__menu-item" to="/">
-              About us
+              Strategies
             </Link>
             <a
               className="header__menu-item"
               target="_blank"
               href="https://medium.com/berezka-dao"
             >
-              Blog
+              How It Works
             </a>
 
             <Link className="header__menu-item" to="/dashboard">
@@ -54,18 +58,20 @@ function Header(props) {
           </div>
 
           <div className={"header__menu-actions"}>
-            {address ? (
-              <div
-                className="connect__value header__title"
-                style={{ margin: "0 10px 0 0" }}
-              >
-                {address}
-              </div>
-            ) : (
-              <a className="header__menu-item" onClick={connectWeb3}>
-                Connect wallet
-              </a>
-            )}
+            <div className="header__menu-item header__menu-item--address">
+              {address ? (
+                <div
+                  className="connect__value header__title"
+                  style={{ margin: "0 10px 0 0" }}
+                >
+                  {formatAddress(address)}
+                </div>
+              ) : (
+                <a className="header__menu-item" onClick={connectWeb3}>
+                  Connect wallet
+                </a>
+              )}
+            </div>
 
             <Link
               className="header__menu-item header__menu-item--bordered"

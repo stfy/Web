@@ -110,7 +110,7 @@
   padding: 0 var(--offset)
   padding-bottom: 10rem
   background: #F7F7F7
-  border-radius: 27px
+  border-radius: 0 0 27px 27px
   padding-top: 4rem
   margin-top: -4rem
   display: none
@@ -128,6 +128,7 @@
       font-size: 3rem
     .offer-grid__cell
       font-size: 2rem
+      line-height: 1.25
     .offer-grid__cell, .offer-grid__head
       padding: 0
     @media (min-width: 768px)
@@ -138,7 +139,7 @@
 
 
 .offer-request-wrapper
-  +flex(column wrap, center, center)
+  +flex(row nowrap, center, center)
 
 .offer-request__title
   letter-spacing: 0.05em
@@ -146,6 +147,8 @@
   color: #696969
   text-transform: uppercase
   margin-top: 3rem
+  @media (min-width: 768px)
+    display: none
 
 .offer-request
   padding: 2rem
@@ -153,7 +156,7 @@
   margin-top: 1rem
   margin-bottom: 10rem
   @media (min-width: 1220px)
-    max-width: 100rem
+    flex: 0
 
   @media (min-width: 768px)
     box-shadow: 2px 4px 4px 5px rgba(77, 71, 53, 0.03)
@@ -164,7 +167,18 @@
       @media (max-width: 1023px)
         flex-direction: column
       .TokenRequestInputSelect
+        & .select__value, & .select__options
+          color: #555
+          letter-spacing: 0.1em
         @media (max-width: 1023px)
           margin-bottom: 2rem
+      .TokenRequestInputButton
+        font-weight: 600
+      .TokenRequestInputLabel
+        margin-left: 1rem
+        line-height: 34px
+      .TokenRequestBlock
+        margin-right: 7rem
+
 
 @import "media"
