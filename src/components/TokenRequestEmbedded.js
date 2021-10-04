@@ -2,6 +2,7 @@ import React from "react";
 import { tokenInfo, currencies, currencyInfo } from "./data/tokens";
 import { exchanges, tokenExchanges } from "./data/exchanges";
 import Select from "./Select";
+import { useTranslation } from "react-i18next";
 
 function Deposit(props) {
   const { canPerformTokenRequest, performTokenRequest } = props;
@@ -66,6 +67,8 @@ function TokenRequestEmbedded(props) {
     smallSum,
   } = props;
 
+  const { t } = useTranslation();
+
   return (
     <>
       <div>
@@ -74,7 +77,7 @@ function TokenRequestEmbedded(props) {
             htmlFor={"receive-" + requestedToken}
             className="TokenRequestInputLabel"
           >
-            Receive
+            {t("OfferRequest.Receive")}
           </label>
 
           <div className="TokenRequestInputSelect input-select ">
@@ -102,7 +105,7 @@ function TokenRequestEmbedded(props) {
             htmlFor={"for-" + requestedToken}
             className="TokenRequestInputLabel"
           >
-            For
+            {t("OfferRequest.For")}
           </label>
           <div className="TokenRequestInputSelect input-select flex-grow">
             <input
@@ -133,7 +136,7 @@ function TokenRequestEmbedded(props) {
           href
           onClick={performTokenRequest}
         >
-          Deposit
+          {t("OfferRequest.Deposit")}
         </a>
       </div>
       {/*{!smallSum && errorMessage && (*/}

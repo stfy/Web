@@ -78,8 +78,29 @@ const resources = {
       },
 
       sidebar: {
-        "My Account": "My Account",
+        "My Account": "Мой Аккаунт",
+        Dashboard: "Дашборд",
+        "About Us": "About Us",
+        Strategies: "Strategies",
+        "How it Works": "How it Works",
+        "Connect Wallet": "Connect Wallet",
+        "Join DAO": "Join DAO",
+        Feedback: "Contact us",
+        Main: "Main",
+      },
+
+      OfferRequest: {
+        "Buy tokens": "Buy tokens",
+        Receive: "Receive",
+        For: "For",
+        Deposit: "Deposit",
+      },
+      Dashboard: {
         Dashboard: "Dashboard",
+      },
+      MyAccount: {
+        "My Account": "My Account",
+        "Connect wallet": "Connect wallet",
       },
     },
   },
@@ -134,6 +155,29 @@ const resources = {
       sidebar: {
         "My Account": "Мой Аккаунт",
         Dashboard: "Дашборд",
+        "About Us": "О нас",
+        Strategies: "Стратегии",
+        "How it Works": "Как это работает?",
+        "Connect Wallet": "Подключить кошелек",
+        "Join DAO": "Вступить в DAO",
+        Feedback: "Свяжитесь с нами",
+        Main: "Главная",
+      },
+
+      OfferRequest: {
+        "Buy tokens": "Купить токены",
+        Receive: "Приобрести",
+        For: "За",
+        Deposit: "Приобрести",
+      },
+
+      Dashboard: {
+        Dashboard: "Дашборд",
+      },
+
+      MyAccount: {
+        "My Account": "Мой аккаунт",
+        "Connect wallet": "Подключить кошелек",
       },
     },
   },
