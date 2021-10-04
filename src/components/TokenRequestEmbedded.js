@@ -128,6 +128,19 @@ function TokenRequestEmbedded(props) {
           </div>
         </div>
 
+        {!smallSum && withdrawEnabled && (
+          <a
+            className={
+              "TokenRequestInputButton TokenRequestInputButton--withdraw button _full" +
+              (canPerformTokenWithdraw ? "" : " _disabled")
+            }
+            href
+            onClick={performTokenWithdraw}
+          >
+            {t("OfferRequest.Withdraw")}
+          </a>
+        )}
+
         <a
           className={
             "TokenRequestInputButton button _full" +
@@ -139,85 +152,23 @@ function TokenRequestEmbedded(props) {
           {t("OfferRequest.Deposit")}
         </a>
       </div>
-      {/*{!smallSum && errorMessage && (*/}
-      {/*  <tr className="desktop_only">*/}
-      {/*    <td*/}
-      {/*      colSpan={4}*/}
-      {/*      className="error"*/}
-      {/*      style={{ borderBottomWidth: 0, padding: 0 }}*/}
-      {/*    >*/}
-      {/*      <span>{errorMessage}</span>*/}
-      {/*    </td>*/}
-      {/*  </tr>*/}
-      {/*)}*/}
-      {/*{smallSum && (*/}
-      {/*  <tr className="desktop_only">*/}
-      {/*    <td colSpan={2} style={{ borderBottomWidth: 0 }} />*/}
-      {/*    <td*/}
-      {/*      colSpan={2}*/}
-      {/*      className="redirect"*/}
-      {/*      style={{ borderBottomWidth: 0, padding: 0, textAlign: "left" }}*/}
-      {/*    >*/}
-      {/*      <span className="redirect">*/}
-      {/*        Dear user,{" "}*/}
-      {/*        <span className="redirect_error">*/}
-      {/*          Token Request works for amounts over $3,000 USDT / USDC / DAI*/}
-      {/*        </span>*/}
-      {/*        <br />*/}
-      {/*        For smaller amounts kindly proceed to Uniswap, Sushiswap or 1Inch*/}
-      {/*      </span>*/}
-      {/*    </td>*/}
-      {/*  </tr>*/}
-      {/*)}*/}
-      {/*{!smallSum && (*/}
-      {/*  <tr>*/}
-      {/*    <td colSpan={2} />*/}
-      {/*    {withdrawEnabled ? (*/}
-      {/*      <>*/}
-      {/*        <Deposit*/}
-      {/*          canPerformTokenRequest={canPerformTokenRequest}*/}
-      {/*          performTokenRequest={performTokenRequest}*/}
-      {/*        />*/}
-      {/*        <Withdraw*/}
-      {/*          withdrawEnabled={withdrawEnabled}*/}
-      {/*          canPerformTokenWithdraw={canPerformTokenWithdraw}*/}
-      {/*          performTokenWithdraw={performTokenWithdraw}*/}
-      {/*        />*/}
-      {/*      </>*/}
-      {/*    ) : (*/}
-      {/*      <>*/}
-      {/*        <td />*/}
-      {/*        <Deposit*/}
-      {/*          canPerformTokenRequest={canPerformTokenRequest}*/}
-      {/*          performTokenRequest={performTokenRequest}*/}
-      {/*        />{" "}*/}
-      {/*      </>*/}
-      {/*    )}*/}
-      {/*  </tr>*/}
-      {/*)}*/}
-      {/*{smallSum && (*/}
-      {/*  <tr>*/}
-      {/*    <td colSpan={2} />*/}
-      {/*    <td colSpan={2}>*/}
-      {/*      <div className="buttons_container">*/}
-      {/*        {Object.keys(exchanges).map((exchange) => (*/}
-      {/*          <a*/}
-      {/*            target="_blank"*/}
-      {/*            key={exchange}*/}
-      {/*            className={*/}
-      {/*              "button _medium" +*/}
-      {/*              (canPerformTokenRequest ? "" : " _disabled")*/}
-      {/*            }*/}
-      {/*            href={tokenExchanges[requestedToken][exchange] || "#"}*/}
-      {/*            onClick={performTokenRequest}*/}
-      {/*          >*/}
-      {/*            Buy on {exchanges[exchange]}*/}
-      {/*          </a>*/}
-      {/*        ))}*/}
-      {/*      </div>*/}
-      {/*    </td>*/}
-      {/*  </tr>*/}
-      {/*)}*/}
+
+      {!smallSum && errorMessage && (
+        <span className={"TokenRequestErrorMessage"}>{errorMessage}</span>
+      )}
+
+      {smallSum && (
+        <div className={"SmallSum"}>
+          <span className="redirect">
+            {t("TokenRequestEmbedded.Dear user")},{" "}
+            <span className="redirect_error">
+              {t("TokenRequestEmbedded.Token Request works")}
+            </span>
+            <br />
+            {t("TokenRequestEmbedded.For smaller")}
+          </span>
+        </div>
+      )}
     </>
   );
 }

@@ -97,6 +97,7 @@ const resources = {
         Receive: "Receive",
         For: "For",
         Deposit: "Deposit",
+        Withdraw: "Withdraw",
       },
       Dashboard: {
         Dashboard: "Dashboard",
@@ -130,6 +131,14 @@ const resources = {
 
       Tokens: {
         afford: Afford_i18n.en,
+      },
+
+      TokenRequestEmbedded: {
+        "Token Request works":
+          "Token Request works for amounts over $3,000 USDT / USDC / DAI",
+        "For smaller":
+          "For smaller amounts kindly proceed to Uniswap, Sushiswap or 1Inch",
+        "Dear user": "Dear user",
       },
     },
   },
@@ -198,6 +207,7 @@ const resources = {
         Receive: "Приобрести",
         For: "За",
         Deposit: "Приобрести",
+        Withdraw: "Вывести",
       },
 
       Dashboard: {
@@ -233,6 +243,14 @@ const resources = {
 
       Tokens: {
         afford: Afford_i18n.ru,
+      },
+
+      TokenRequestEmbedded: {
+        "Token Request works":
+          "приобретение токенов доступно только для вкладов больше $3,000 USDT / USDC / DAI",
+        "For smaller":
+          "Для меньших сумм рекомендуем перейти к Uniswap, Sushiswap or 1Inch",
+        "Dear user": "Уважаемый Пользователь",
       },
     },
   },

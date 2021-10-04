@@ -160,15 +160,28 @@
   @media (min-width: 768px)
     display: none
 
-
 .offer-request
   padding: 2rem
   background: #fff
   margin-top: 1rem
   margin-bottom: 10rem
+  .TokenRequestErrorMessage
+    +flex(row, flex-end, flex-end)
+    padding-top: 2rem
+  .SmallSum
+    +flex(row, flex-end, flex-end)
+    padding-top: 2rem
+    text-align: right
   .TokenRequestInputButton
     font-weight: 600
-
+    &--withdraw
+      margin-bottom: 2rem
+      @media (min-width: 768px)
+        margin-bottom: 0
+        margin-right: 2rem
+    &._disabled
+      opacity: .8
+      pointer-events: none
   .TokenRequestInputLabel
     @media (max-width: 767px)
       padding: 0 14px
