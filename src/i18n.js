@@ -80,7 +80,7 @@ const resources = {
 
       sidebar: {
         "My Account": "Мой Аккаунт",
-        Dashboard: "Дашборд",
+        Dashboard: "Dashboard",
         "About Us": "About Us",
         Strategies: "Strategies",
         "How it Works": "How it Works",
