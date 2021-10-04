@@ -1,4 +1,4 @@
-# Getting Started with Berezka Web
+# Getting Started with Afford Capital Web
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
