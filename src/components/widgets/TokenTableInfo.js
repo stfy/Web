@@ -1,7 +1,8 @@
-import React, { useState, useCallback, useRef } from "react";
-import { ftmAmount, fmtDollatAmount } from "./format";
+import React, { useCallback, useRef, useState } from "react";
+import { fmtDollatAmount } from "./format";
 import TokenTableInfoRow from "./TokenTableInfoRow";
 import TokenTableValueOutput from "./TokenTableValueOutput";
+import { useTranslation } from "react-i18next";
 
 const TokenTableInfo = (props) => {
   const {
@@ -74,20 +75,22 @@ const TokenTableInfo = (props) => {
   const profitPercent =
     totalInvested == 0 ? 0 : (totalProfit / totalInvested) * 100;
 
+  const { t } = useTranslation();
+
   return (
     <table class="table table-account">
       <thead>
         <tr>
-          <th rowSpan={2}>Product</th>
-          <th rowSpan={2}>Token</th>
-          <th rowSpan={2}>Amount</th>
-          <th rowSpan={2}>Invested amount, USDT</th>
-          <th rowSpan={2}>AVG purchase price</th>
-          <th>Token price</th>
-          <th>Portfolio value, USDT</th>
-          <th>Profit/Loss, USDT</th>
-          <th>Profit/Loss, %</th>
-          <th>APY %</th>
+          <th rowSpan={2}>{t("TokenTableInfo.Product")}</th>
+          <th rowSpan={2}>{t("TokenTableInfo.Token")}</th>
+          <th rowSpan={2}>{t("TokenTableInfo.Amount")}</th>
+          <th rowSpan={2}>{t("TokenTableInfo.Invested amount")}, USDT</th>
+          <th rowSpan={2}>{t("TokenTableInfo.AVG purchase price")}</th>
+          <th>{t("TokenTableInfo.Token price")}</th>
+          <th>{t("TokenTableInfo.Portfolio value")}, USDT</th>
+          <th>{t("TokenTableInfo.Profit/Loss")}, USDT</th>
+          <th>{t("TokenTableInfo.Profit/Loss")}, %</th>
+          <th>{t("TokenTableInfo.APY")} %</th>
         </tr>
       </thead>
       <tbody>
@@ -108,7 +111,7 @@ const TokenTableInfo = (props) => {
       </tbody>
       <tfoot>
         <tr>
-          <td>TOTAL</td>
+          <td>{t("TokenTableInfo.TOTAL")}</td>
           <td />
           <td />
           <td>

@@ -4,6 +4,7 @@ import { ftmAmount, fmtDollatAmount, fmtDollatAmountSmall } from "./format";
 import AccountPortfolioProvider from "./AccountPortfolioProvider";
 import TokenTableValueOutput from "./TokenTableValueOutput";
 import ERC20Provider from "./ERC20Provider";
+import { useTranslation } from "react-i18next";
 
 const getPrice = (purchase) => {
   let price = 0;
@@ -181,6 +182,9 @@ const TokenTableInfoRow = (props) => {
   console.log(`Rendering TokenTableInfoRow for 
         token ${token.tableName}
     `);
+
+  const { t } = useTranslation();
+
   return (
     <ERC20Provider
       walletAddress={walletAddress}
@@ -194,7 +198,7 @@ const TokenTableInfoRow = (props) => {
           childrenLoading={() => <RowLoading token={token} />}
           children={(info) => (
             <RowData
-              tableName={token.tableName}
+              tableName={t(`token.${token.tableName}`)}
               symbol={token.symbol}
               address={token.address}
               balance={balance}

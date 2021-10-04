@@ -144,6 +144,19 @@ const resources = {
       token: {
         Tiger: "Tiger",
       },
+
+      TokenTableInfo: {
+        Product: "Product",
+        Token: "Token",
+        Amount: "Amount",
+        "Invested amount": "Invested amount",
+        "AVG purchase price": "AVG purchase price",
+        "Token price": "Token price",
+        "Portfolio value": "Portfolio value",
+        "Profit/Loss": "Profit/Loss",
+        APY: "APY",
+        TOTAL: "TOTAL",
+      },
     },
   },
   ru: {
@@ -259,6 +272,19 @@ const resources = {
 
       token: {
         Tiger: "Тигр",
+      },
+
+      TokenTableInfo: {
+        Product: "Продукт",
+        Token: "Токен",
+        Amount: "Сумма",
+        "Invested amount": "Инвестированная сумма",
+        "AVG purchase price": "Средняя стоимость покупки",
+        "Token price": "Цена токена",
+        "Portfolio value": "Стоимость портфеля",
+        "Profit/Loss": "Прибыль/Убыток",
+        APY: "APY",
+        TOTAL: "ИТОГО",
       },
     },
   },
