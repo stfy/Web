@@ -6,6 +6,7 @@ import APY from "./widgets/APY";
 import APYLegacy from "./widgets/legacy/APYLegacy";
 import TokenPriceLegacy from "./widgets/legacy/TokenPriceLegacy";
 import TokenPrice from "./widgets/TokenPrice";
+import { useTranslation } from "react-i18next";
 
 function AssetTableRow(props) {
   const {
@@ -19,6 +20,8 @@ function AssetTableRow(props) {
   } = props;
 
   const { address, tableName } = tokenInfo[tokenName];
+
+  const { t } = useTranslation();
 
   const myRef = useRef(null);
   const location = useLocation();
@@ -53,7 +56,7 @@ function AssetTableRow(props) {
       >
         <div className="main-table__td">
           <div className="main-table__td-row">
-            <span>{tableName}</span>
+            <span>{t(`token.${tableName}`)}</span>
           </div>
         </div>
         <div className="main-table__td desktop_only">

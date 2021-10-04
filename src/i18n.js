@@ -140,6 +140,10 @@ const resources = {
           "For smaller amounts kindly proceed to Uniswap, Sushiswap or 1Inch",
         "Dear user": "Dear user",
       },
+
+      token: {
+        Tiger: "Tiger",
+      },
     },
   },
   ru: {
@@ -251,6 +255,10 @@ const resources = {
         "For smaller":
           "Для меньших сумм рекомендуем перейти к Uniswap, Sushiswap or 1Inch",
         "Dear user": "Уважаемый Пользователь",
+      },
+
+      token: {
+        Tiger: "Тигр",
       },
     },
   },
