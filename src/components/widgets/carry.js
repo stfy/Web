@@ -1,23 +1,11 @@
 import { fetchDedupe } from "fetch-dedupe";
 import { nameByAddress, tokenInfo } from "../data/tokens";
 
-const INITIAL_CARRY_DAYID = 18668;
+const INITIAL_CARRY_DAYID = 18832;
 const INITIAL_CARRY = {
   afford: {
-    price: 1.587841891,
-    totalCarry: 29767.91,
-  },
-  dyna: {
-    price: 3.255011,
-    totalCarry: 48091.28,
-  },
-  emiflex: {
-    price: 1.7563574,
-    totalCarry: 6391.09,
-  },
-  deposit: {
-    price: 1.12880471717,
-    totalCarry: 647.41,
+    price: 1.0,
+    totalCarry: 0.0,
   },
 };
 

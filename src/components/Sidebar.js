@@ -96,7 +96,7 @@ function Sidebar(props) {
         </div>
       </div>
       <div className="try-email">
-        <a href="mailto:info@forta.capital" className={"try-email__link"}>
+        <a href="mailto:info@afford.capital" className={"try-email__link"}>
           <div className={"try-email__title"}>{t("sidebar.Feedback")}</div>
           <span className={"try-email__icon"}>
             <svg
@@ -112,7 +112,7 @@ function Sidebar(props) {
               />
             </svg>
           </span>
-          info@forta.capital
+          info@afford.capital
         </a>
       </div>
       <div className="sidebar-logo">
