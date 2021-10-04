@@ -39,7 +39,7 @@ const resources = {
           "We are using these audited protocols",
 
         "Security Audit": "Security Audit",
-        "Berezka DAO": "Berezka DAO",
+        "Afford Capital DAO": "Afford Capital DAO",
         "is a dec": `is a decentralized autonomous organization based on Aragon.`,
         "Aragon Smart Contract Audits": "Aragon Smart Contract Audits",
         "A number of": `A number of audits have been performed on the existing smart
@@ -144,6 +144,19 @@ const resources = {
       token: {
         Tiger: "Tiger",
       },
+
+      TokenTableInfo: {
+        Product: "Product",
+        Token: "Token",
+        Amount: "Amount",
+        "Invested amount": "Invested amount",
+        "AVG purchase price": "AVG purchase price",
+        "Token price": "Token price",
+        "Portfolio value": "Portfolio value",
+        "Profit/Loss": "Profit/Loss",
+        APY: "APY",
+        TOTAL: "TOTAL",
+      },
     },
   },
   ru: {
@@ -170,7 +183,7 @@ const resources = {
           "Мы используем следующие проверенные протоколы",
 
         "Security Audit": "Аудит безопасности",
-        "Berezka DAO": "Berezka DAO",
+        "Afford Capital DAO": "Afford Capital DAO",
         "is a dec": `— децентрализованная автономная организация, основанная на Aragon.`,
         "Aragon Smart Contract Audits": "Аудит смарт-контрактов Aragon",
         "A number of": `White Hat Group, Consensys Diligence, Authio и другие организации осуществили ряд аудитов текущей кодовой базы смарт-контрактов. Возникающие изменения смарт-контрактов будут проходить дальнейшую проверку по усмотрению Aragon Association.`,
@@ -259,6 +272,19 @@ const resources = {
 
       token: {
         Tiger: "Тигр",
+      },
+
+      TokenTableInfo: {
+        Product: "Продукт",
+        Token: "Токен",
+        Amount: "Сумма",
+        "Invested amount": "Инвестированная сумма",
+        "AVG purchase price": "Средняя стоимость покупки",
+        "Token price": "Цена токена",
+        "Portfolio value": "Стоимость портфеля",
+        "Profit/Loss": "Прибыль/Убыток",
+        APY: "APY",
+        TOTAL: "ИТОГО",
       },
     },
   },
