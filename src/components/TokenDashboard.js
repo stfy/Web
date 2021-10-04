@@ -10,6 +10,7 @@ import TokenAmountGraph from "./widgets/TokenAmountGraph";
 import PortfolioPartsGraph from "./widgets/PortfolioPartsGraph";
 import PortfolioParts from "./widgets/PortfolioParts";
 import TokenCarry from "./widgets/TokenCarry";
+import { useTranslation } from "react-i18next";
 
 function TokenDashboard(props) {
   const token = props.match.params.id;
@@ -19,6 +20,8 @@ function TokenDashboard(props) {
   const enableCarry = tokenInfo[token].enableCarry;
   const isAdmin = address && admins.includes(address.toLowerCase());
 
+  const { t } = useTranslation();
+
   React.useEffect(() => {
     props.setTokenName(token);
   }, []);
@@ -27,7 +30,7 @@ function TokenDashboard(props) {
     <>
       {enableCarry ? (
         <div className="info-carry">
-          Accumulated Carry:{" "}
+          {t("TokenDashboard.Accumulated Carry")}:{" "}
           <TokenCarry
             tokenAddress={tokenAddress}
             dollarSeparator=" "
@@ -43,7 +46,11 @@ function TokenDashboard(props) {
         <div className="info-main grid-col-4 grid-md-12">
           <div className="info-main__header">
             <div className="info-main__title">
-              {tokenInfo[token].tableName} token price, USD
+              {t("TokenDashboard.TokenPriceWName").replace(
+                "{name}",
+                tokenInfo[token].tableName
+              )}
+              , USD
             </div>
           </div>
           <div className="info-main__value">
@@ -52,7 +59,9 @@ function TokenDashboard(props) {
         </div>
         <div className="info-main grid-col-4 grid-md-12">
           <div className="info-main__header">
-            <div className="info-main__title">Portfolio, USD</div>
+            <div className="info-main__title">
+              {t("TokenDashboard.Net")}, USD
+            </div>
           </div>
           <div className="info-main__value">
             <TokenPrice
@@ -73,7 +82,9 @@ function TokenDashboard(props) {
         </div>
         <div className="info-general grid-col-4 grid-lg-6 grid-md-12">
           <div className="info-general__header">
-            <div className="info-general__title">Portfolio</div>
+            <div className="info-general__title">
+              {t("TokenDashboard.Portfolio")}
+            </div>
             <div className="info-general__menu">
               <div className="dropdown">
                 <a className="dropdown__button" href>
@@ -94,7 +105,9 @@ function TokenDashboard(props) {
         </div>
         <div className="info-general _wide grid-col-8 grid-lg-6 grid-md-12">
           <div className="info-general__header">
-            <div className="info-general__title">Token Price, USD</div>
+            <div className="info-general__title">
+              {t("TokenDashboard.Token Price")}, USD
+            </div>
             <div className="info-general__menu">
               <div className="dropdown">
                 <a className="dropdown__button" href>
@@ -116,7 +129,9 @@ function TokenDashboard(props) {
         </div>
         <div className="info-general grid-col-4 grid-lg-6 grid-md-12">
           <div className="info-general__header">
-            <div className="info-general__title">Liquidity pools</div>
+            <div className="info-general__title">
+              {t("TokenDashboard.Liquidity pools")}
+            </div>
           </div>
           <div className="info-general__content">
             <PortfolioParts tokenAddress={tokenAddress} web3={web3Global} />
@@ -124,7 +139,9 @@ function TokenDashboard(props) {
         </div>
         <div className="info-general _wide grid-col-8 grid-lg-6 grid-md-12">
           <div className="info-general__header">
-            <div className="info-general__title">Portfolio Value, USD</div>
+            <div className="info-general__title">
+              {t("TokenDashboard.Portfolio Value")}, USD
+            </div>
             <div className="info-general__menu">
               <div className="dropdown">
                 <a className="dropdown__button" href>

@@ -1,8 +1,11 @@
 import React from "react";
 import { tokenInfo } from "./data/tokens";
+import { useTranslation } from "react-i18next";
 
 function OnChainValidation(props) {
   const { requestedToken } = props;
+
+  const { t } = useTranslation();
 
   return (
     <>
@@ -19,7 +22,7 @@ function OnChainValidation(props) {
               key={index}
               href={`https://debank.com/profile/${vault}`}
             >
-              Wallet
+              {t("OnChainValidation.Wallet")}
               {tokenInfo[requestedToken].vaults.length === 1
                 ? ""
                 : `-${index + 1}`}

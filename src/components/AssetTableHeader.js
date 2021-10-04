@@ -26,7 +26,7 @@ class AssetTableHeader extends React.Component {
             "main-table__thead main-table__thead--mobile main-table__tr"
           }
         >
-          Strategy
+          {t("index.Strategies")}
         </div>
       </>
     );

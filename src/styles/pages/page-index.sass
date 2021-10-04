@@ -28,7 +28,10 @@
   max-width: 250px
   &-left
     flex: 1 0 50%
-    +flex(row nowrap, flex-start, flex-start)
+    +flex(row nowrap, center, flex-start)
+    @media (min-width: 768px)
+      +flex(row nowrap, flex-start, flex-start)
+
   &-right
     margin-top: 5rem
     flex: 1 0 50%
@@ -48,23 +51,26 @@
 .page-index__title__total-price
   font-weight: 500
   white-space: nowrap
-  font-size: 4rem
+  font-size: 40px
   line-height: 1
   @media (min-width: 768px)
     font-size: 9rem
   &-label
     margin-top: 2rem
-    font-size: 2rem
-    letter-spacing: 0.29em
+    font-size: 1.7rem
+    letter-spacing: 0.15em
+    text-transform: uppercase
+    @media (min-width: 768px)
+      letter-spacing: 0.29em
 
 .page-index__description
   margin-top: 3rem
-  font-size: 1.2rem
+  font-size: 12px
   @media (min-width: 768px)
     font-size: 1.8rem
 
 .page-index__description-appendix
-  font-size: 1.2rem
+  font-size: 12px
   @media (min-width: 768px)
     font-size: 1.8rem
 

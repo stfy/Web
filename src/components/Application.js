@@ -47,8 +47,8 @@ const Application = () => {
 
         const geocode = geo.country_code2.toString().toLowerCase();
 
-        if (!localStorage.getItem("lang") && ["ru", "en"].includes(geocode)) {
-          localStorage.setItem("lang", geocode);
+        if (!localStorage.getItem("lang")) {
+          localStorage.setItem("lang", geocode === "ru" ? geocode : "en");
         }
       }
     };

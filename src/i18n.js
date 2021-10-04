@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import OnChainValidation from "./components/OnChainValidation";
 
 // the translations
 // (tip move them in a JSON file and import them,
@@ -78,8 +79,43 @@ const resources = {
       },
 
       sidebar: {
-        "My Account": "My Account",
+        "My Account": "Мой Аккаунт",
         Dashboard: "Dashboard",
+        "About Us": "About Us",
+        Strategies: "Strategies",
+        "How it Works": "How it Works",
+        "Connect Wallet": "Connect Wallet",
+        "Join DAO": "Join DAO",
+        Feedback: "Contact us",
+        Main: "Main",
+      },
+
+      OfferRequest: {
+        "Buy tokens": "Buy tokens",
+        Receive: "Receive",
+        For: "For",
+        Deposit: "Deposit",
+      },
+      Dashboard: {
+        Dashboard: "Dashboard",
+      },
+      MyAccount: {
+        "My Account": "My Account",
+        "Connect wallet": "Connect wallet",
+      },
+
+      TokenDashboard: {
+        TokenPriceWName: `{name} token price`,
+        Net: `Portfolio`,
+        Portfolio: "Portfolio",
+        "Token Price": `Token Price`,
+        "Liquidity pools": "Liquidity pools",
+        "Portfolio Value": "Portfolio Value",
+        "Accumulated Carry": "Accumulated Carry",
+      },
+
+      OnChainValidation: {
+        Wallet: `Wallet`,
       },
     },
   },
@@ -134,6 +170,42 @@ const resources = {
       sidebar: {
         "My Account": "Мой Аккаунт",
         Dashboard: "Дашборд",
+        "About Us": "О нас",
+        Strategies: "Стратегии",
+        "How it Works": "Как это работает?",
+        "Connect Wallet": "Подключить кошелек",
+        "Join DAO": "Вступить в DAO",
+        Feedback: "Свяжитесь с нами",
+        Main: "Главная",
+      },
+
+      OfferRequest: {
+        "Buy tokens": "Купить токены",
+        Receive: "Приобрести",
+        For: "За",
+        Deposit: "Приобрести",
+      },
+
+      Dashboard: {
+        Dashboard: "Дашборд",
+      },
+
+      MyAccount: {
+        "My Account": "Мой аккаунт",
+        "Connect wallet": "Подключить кошелек",
+      },
+
+      TokenDashboard: {
+        TokenPriceWName: `Цена токена {name}`,
+        Net: `Net портфель`,
+        Portfolio: "Портфель",
+        "Token Price": `Цена токена`,
+        "Liquidity pools": "Пулы ликвидности",
+        "Portfolio Value": "Стоимость портфеля",
+        "Accumulated Carry": "Накопленный Кэрри: ",
+      },
+      OnChainValidation: {
+        Wallet: "Кошелек",
       },
     },
   },

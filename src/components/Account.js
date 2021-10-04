@@ -2,6 +2,7 @@ import React from "react";
 import TokenTableInfo from "./widgets/TokenTableInfo";
 import { allTokens } from "./data/tokens";
 import HeaderAccountBalance from "./HeaderAccountBalance";
+import { useTranslation } from "react-i18next";
 
 function Account(props) {
   const {
@@ -12,11 +13,12 @@ function Account(props) {
     globalTotal,
   } = props;
 
+  const { t } = useTranslation();
   return (
     <div className="page account PageAccount">
       <section className="section">
         <div className="section__header">
-          <h1 className="title">My Account</h1>
+          <h1 className="title">{t("MyAccount.My Account")}</h1>
 
           <HeaderAccountBalance globalTotal={globalTotal} />
         </div>
@@ -25,7 +27,7 @@ function Account(props) {
           {!address ? (
             <div className="buttons">
               <a className="button _light" href onClick={connectWeb3}>
-                Connect wallet
+                {t("MyAccount.Connect wallet")}
               </a>
             </div>
           ) : (

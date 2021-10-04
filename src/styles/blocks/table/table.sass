@@ -124,22 +124,31 @@
     flex-direction: column
     color: #000000
     border-radius: 0
+    margin-top: -4rem
+    padding: 8rem
+
     .offer-grid__head
       font-size: 3rem
+      text-align: center
+      &--top
+        font-size: 32px
+        letter-spacing: 0.105em
+        font-weight: 500
     .offer-grid__cell
       font-size: 2rem
       line-height: 1.25
+      &--top
+        font-size: 16px
+        text-align: center
     .offer-grid__cell, .offer-grid__head
       padding: 0
     @media (min-width: 768px)
       display: none
 
 
-
-
-
 .offer-request-wrapper
-  +flex(row nowrap, center, center)
+  @media (min-width: 768px)
+    +flex(row nowrap, center, center)
 
 .offer-request__title
   letter-spacing: 0.05em
@@ -147,17 +156,30 @@
   color: #696969
   text-transform: uppercase
   margin-top: 3rem
+  text-align: center
   @media (min-width: 768px)
     display: none
+
 
 .offer-request
   padding: 2rem
   background: #fff
   margin-top: 1rem
   margin-bottom: 10rem
+  .TokenRequestInputButton
+    font-weight: 600
+
+  .TokenRequestInputLabel
+    @media (max-width: 767px)
+      padding: 0 14px
+
+  .TokenRequestInputSelect
+    @media (max-width: 767px)
+      width: auto
+      margin-top: 1rem
+
   @media (min-width: 1220px)
     flex: 0
-
   @media (min-width: 768px)
     box-shadow: 2px 4px 4px 5px rgba(77, 71, 53, 0.03)
     border-radius: 50px

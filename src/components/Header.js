@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation, withTranslation } from "react-i18next";
-import { tokenInfo } from "./data/tokens";
 import Select from "./Select";
 
 function formatAddress(address) {

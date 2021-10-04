@@ -8,9 +8,12 @@ import TotalPrice from "./widgets/TotalPrice";
 import { legacyTokenAddresses, tokenAddresses, tokenInfo } from "./data/tokens";
 import TokenPrice from "./widgets/TokenPrice";
 import OnChainValidation from "./OnChainValidation";
+import { useTranslation } from "react-i18next";
 
 function Dashboard(props) {
   const { web3Global, address } = props;
+
+  const { t } = useTranslation();
 
   const [token, setTokenName] = React.useState(null);
 
@@ -52,7 +55,7 @@ function Dashboard(props) {
         </div>
 
         <div className="section__header">
-          <h1 className="title">Dashboard</h1>
+          <h1 className="title">{t("Dashboard.Dashboard")}</h1>
         </div>
         <div className="section__breadcrumbs">
           <TokenDashboardNavigation />
