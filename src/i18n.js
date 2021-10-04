@@ -39,7 +39,7 @@ const resources = {
           "We are using these audited protocols",
 
         "Security Audit": "Security Audit",
-        "Berezka DAO": "Berezka DAO",
+        "Afford Capital DAO": "Afford Capital DAO",
         "is a dec": `is a decentralized autonomous organization based on Aragon.`,
         "Aragon Smart Contract Audits": "Aragon Smart Contract Audits",
         "A number of": `A number of audits have been performed on the existing smart
@@ -170,7 +170,7 @@ const resources = {
           "Мы используем следующие проверенные протоколы",
 
         "Security Audit": "Аудит безопасности",
-        "Berezka DAO": "Berezka DAO",
+        "Afford Capital DAO": "Afford Capital DAO",
         "is a dec": `— децентрализованная автономная организация, основанная на Aragon.`,
         "Aragon Smart Contract Audits": "Аудит смарт-контрактов Aragon",
         "A number of": `White Hat Group, Consensys Diligence, Authio и другие организации осуществили ряд аудитов текущей кодовой базы смарт-контрактов. Возникающие изменения смарт-контрактов будут проходить дальнейшую проверку по усмотрению Aragon Association.`,

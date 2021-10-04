@@ -109,9 +109,6 @@ function Header(props) {
             </div>
           </div>
         </nav>
-        {/*<div className="desktop_only header__title">*/}
-        {/*  #Berezka DAO - DeFi Asset Management*/}
-        {/*</div>*/}
       </div>
       <div
         className="buttons"

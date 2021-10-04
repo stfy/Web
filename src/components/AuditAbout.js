@@ -15,7 +15,7 @@ class AuditAbout extends React.Component {
           <div className="information">
             <div className="information__item">
               <div className="information__title">
-                <b>{t("index.Berezka DAO")}</b> {t("index.is a dec")}
+                <b>{t("index.Afford Capital DAO")}</b> {t("index.is a dec")}
               </div>
               <div className="information__title">
                 {t("index.Aragon Smart Contract Audits")}
