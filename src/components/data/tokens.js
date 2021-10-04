@@ -9,7 +9,7 @@ export const tokenInfo = {
     carryPercent: 0.2,
     vaults: ["0x80eb71730f63c124db241ce1fd03f2b360436312"],
     maximumDiff: 4,
-    enableCarry: false,
+    enableCarry: true,
   },
 };
 
