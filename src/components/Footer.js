@@ -60,7 +60,7 @@ function Email() {
 
   return (
     <div className="email">
-      <a href="mailto:info@forta.capital" className={"email__link"}>
+      <a href="mailto:info@afford.capital" className={"email__link"}>
         <div className={"email__title"}>{t("sidebar.Feedback")}</div>
         <span className={"email__icon"}>
           <svg
@@ -76,7 +76,7 @@ function Email() {
             />
           </svg>
         </span>
-        info@forta.capital
+        info@afford.capital
       </a>
 
       <svg
@@ -102,13 +102,6 @@ function Email() {
           fill-opacity="0.98"
         />
       </svg>
-
-      {/*<a href="mailto:info@forta.capital" className={"email__link"}>*/}
-      {/*  <span className={"email__icon"}>*/}
-      {/*    <EmailIcon />*/}
-      {/*  </span>*/}
-      {/*  info@forta.capital*/}
-      {/*</a>*/}
     </div>
   );
 }
