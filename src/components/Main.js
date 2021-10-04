@@ -20,10 +20,6 @@ function Main(props) {
 
   const inputRef = React.useRef();
 
-  React.useEffect(() => {
-    console.log(inputRef.current);
-  }, []);
-
   const hideSidebar = () => {
     inputRef && inputRef.current.click();
   };

@@ -1,6 +1,8 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import OnChainValidation from "./components/OnChainValidation";
+import { Afford_i18n } from "./components/data/descriptions";
+import AssetTableRowDropdown from "./components/AssetTableRowDropdown";
 
 // the translations
 // (tip move them in a JSON file and import them,
@@ -79,7 +81,7 @@ const resources = {
       },
 
       sidebar: {
-        "My Account": "Мой Аккаунт",
+        "My Account": "My Account",
         Dashboard: "Dashboard",
         "About Us": "About Us",
         Strategies: "Strategies",
@@ -116,6 +118,18 @@ const resources = {
 
       OnChainValidation: {
         Wallet: `Wallet`,
+      },
+
+      AssetTableRowDropdown: {
+        "Whats it like": "What's it like",
+        Details: "Details",
+        Risks: "Risks",
+        APY: "Annual Percentage Yield (APY)",
+        TVL: "Total Value Locked (TVL)",
+      },
+
+      Tokens: {
+        afford: Afford_i18n.en,
       },
     },
   },
@@ -207,6 +221,19 @@ const resources = {
       OnChainValidation: {
         Wallet: "Кошелек",
       },
+
+      AssetTableRowDropdown: {
+        "Whats it like": "На что это похоже?",
+        Details: "Детали",
+        Risks: "Риск",
+
+        APY: "Годовой процентный доход (APY)",
+        TVL: "Общая сумма (TVL)",
+      },
+
+      Tokens: {
+        afford: Afford_i18n.ru,
+      },
     },
   },
 };
@@ -221,6 +248,11 @@ i18n
 
     interpolation: {
       escapeValue: false, // react already safes from xss
+    },
+
+    react: {
+      transSupportBasicHtmlNodes: true, // allow <br/> and simple html elements in translations
+      transKeepBasicHtmlNodesFor: ["br", "strong", "i"],
     },
   });
 
