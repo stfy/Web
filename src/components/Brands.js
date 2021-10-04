@@ -12,7 +12,7 @@ class Brands extends React.Component {
         </div>
 
         <div className="section__hint">
-          {t("We are using these audited protocols")}
+          {t("index.We are using these audited protocols")}
         </div>
 
         <div className="brands">

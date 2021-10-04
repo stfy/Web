@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import OnChainValidation from "./components/OnChainValidation";
 
 // the translations
 // (tip move them in a JSON file and import them,
@@ -102,6 +103,20 @@ const resources = {
         "My Account": "My Account",
         "Connect wallet": "Connect wallet",
       },
+
+      TokenDashboard: {
+        TokenPriceWName: `{name} token price`,
+        Net: `Portfolio`,
+        Portfolio: "Portfolio",
+        "Token Price": `Token Price`,
+        "Liquidity pools": "Liquidity pools",
+        "Portfolio Value": "Portfolio Value",
+        "Accumulated Carry": "Accumulated Carry",
+      },
+
+      OnChainValidation: {
+        Wallet: `Wallet`,
+      },
     },
   },
   ru: {
@@ -178,6 +193,19 @@ const resources = {
       MyAccount: {
         "My Account": "Мой аккаунт",
         "Connect wallet": "Подключить кошелек",
+      },
+
+      TokenDashboard: {
+        TokenPriceWName: `Цена токена {name}`,
+        Net: `Net портфель`,
+        Portfolio: "Портфель",
+        "Token Price": `Цена токена`,
+        "Liquidity pools": "Пулы ликвидности",
+        "Portfolio Value": "Стоимость портфеля",
+        "Accumulated Carry": "Накопленный Кэрри: ",
+      },
+      OnChainValidation: {
+        Wallet: "Кошелек",
       },
     },
   },
