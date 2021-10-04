@@ -65,9 +65,17 @@ function AssetTableRow(props) {
         </div>
         <div className="main-table__td desktop_only">
           {legacy ? (
-            <TokenPriceLegacy tokenAddress={address} />
+            <TokenPriceLegacy
+              dollarSeparator=" "
+              separator=" "
+              tokenAddress={address}
+            />
           ) : (
-            <TokenPrice tokenAddress={address} />
+            <TokenPrice
+              dollarSeparator=" "
+              separator=" "
+              tokenAddress={address}
+            />
           )}
         </div>
         <div className="main-table__td">
