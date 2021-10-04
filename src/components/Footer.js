@@ -114,7 +114,11 @@ function Email() {
 }
 
 function Copyright() {
-  return <div className="copyright">© 2021 Forta Capital</div>;
+  return (
+    <div className="copyright">
+      © ${new Date().getFullYear()} Afford Capital
+    </div>
+  );
 }
 
 function Policy() {
