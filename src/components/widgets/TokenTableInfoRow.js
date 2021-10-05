@@ -69,7 +69,7 @@ const RowDataC = (props) => {
         symbol ${symbol} 
         address ${address} 
         balance ${balance} 
-        purchasesWithPrice ${purchasesWithPrice} 
+        purchasesWithPrice ${JSON.stringify(purchasesWithPrice, null, 2)} 
         lastPrice ${lastPrice} 
         apy ${apy} 
     `);
