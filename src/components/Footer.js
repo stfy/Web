@@ -108,9 +108,7 @@ function Email() {
 
 function Copyright() {
   return (
-    <div className="copyright">
-      © ${new Date().getFullYear()} Afford Capital
-    </div>
+    <div className="copyright">© {new Date().getFullYear()} Afford Capital</div>
   );
 }
 
