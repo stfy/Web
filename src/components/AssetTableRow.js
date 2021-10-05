@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import AssetTableRowDropdown from "./AssetTableRowDropdown";
 import { tokenInfo } from "./data/tokens";
@@ -103,6 +103,28 @@ function AssetTableRow(props) {
         connectWeb3={connectWeb3}
         tokenName={tokenName}
         web3Global={web3Global}
+        apy={
+          legacy ? (
+            <APYLegacy tokenAddress={address} decimals={0} />
+          ) : (
+            <APY tokenAddress={address} decimals={0} />
+          )
+        }
+        tokenPrice={
+          legacy ? (
+            <TokenPriceLegacy
+              dollarSeparator=" "
+              separator=" "
+              tokenAddress={address}
+            />
+          ) : (
+            <TokenPrice
+              dollarSeparator=" "
+              separator=" "
+              tokenAddress={address}
+            />
+          )
+        }
       />
     </>
   );

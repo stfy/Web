@@ -5,7 +5,7 @@ import TokenRequestEmbedded from "./TokenRequestEmbedded";
 import { Trans, useTranslation } from "react-i18next";
 
 function AssetTableRowDropdown(props) {
-  const { tokenName, connectWeb3, legacy, web3Global } = props;
+  const { tokenName, connectWeb3, legacy, web3Global, apy, tokenPrice } = props;
 
   const { t } = useTranslation();
   const k = (key) => `Tokens.${tokenName}.${key}`;
@@ -35,14 +35,16 @@ function AssetTableRowDropdown(props) {
       </div>
 
       <div className="offer-grid offer-grid--mobile">
-        <div className="offer-grid__head offer-grid__head--top">41%</div>
+        <div className="offer-grid__head offer-grid__head--top">{apy}</div>
         <div className="offer-grid__cell offer-grid__cell--top">
-          {t("OfferRequest.APY")}
+          {t("AssetTableRowDropdown.APY")}
         </div>
 
-        <div className="offer-grid__head offer-grid__head--top">$ 466 122</div>
+        <div className="offer-grid__head offer-grid__head--top">
+          {tokenPrice}
+        </div>
         <div className="offer-grid__cell offer-grid__cell--top">
-          {t("OfferRequest.TVL")}
+          {t("AssetTableRowDropdown.TVL")}
         </div>
 
         <div className="offer-grid__head" style={{ marginTop: "3rem" }}>

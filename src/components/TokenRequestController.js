@@ -5,6 +5,7 @@ import { round } from "./widgets/round";
 import { oracle } from "./widgets/oracle";
 import { useLocalStorage } from "./widgets/useLocalStorage";
 import { useInterval } from "./widgets/useInterval";
+import { useTranslation } from "react-i18next";
 
 const WITHDRAW_CONTRACT = "0xcb947e889f7dda1df9d1fa5932ebfeee99bc893b";
 const TOKEN_REQUST_MIN_AMOUNT = 0;
@@ -680,6 +681,9 @@ function TokenRequestController(props) {
     "withdraw_account",
     null
   );
+
+  const { t } = useTranslation();
+
   const { loading, merged } = useTokenData(
     tokenInfo[requestedToken].address,
     false
@@ -788,7 +792,7 @@ function TokenRequestController(props) {
       //
       const ethBalance = await web3.eth.getBalance(address);
       if (ethBalance <= 0) {
-        setErrorMessage("Not enough ETH to pay transaction fees");
+        setErrorMessage(t("ErrorMessage.Not enough ETH"));
         return;
       }
 
@@ -806,7 +810,7 @@ function TokenRequestController(props) {
         .call();
       const balanceFloat = Number.parseFloat(balance);
       if (!balanceFloat || web3.utils.toBN(balance).lt(offeredAmountDecimals)) {
-        setErrorMessage("Not enough USDT / USDC / DAI on balance");
+        setErrorMessage(t("ErrorMessage.Not enough balance"));
         return;
       }
       let nonce = await web3.eth.getTransactionCount(address);
@@ -878,7 +882,7 @@ function TokenRequestController(props) {
       const offeredTokenSymbol = currencyInfo[offeredToken].symbol;
 
       if (offeredToken !== "dai") {
-        setErrorMessage("At the moment, only DAI withdrawal is allowed");
+        setErrorMessage(t("ErrorMessage.only DAI withdrawal is allowed"));
         return;
       }
 
@@ -886,7 +890,7 @@ function TokenRequestController(props) {
       //
       const ethBalance = await web3.eth.getBalance(address);
       if (ethBalance <= 0) {
-        setErrorMessage("Not enough ETH to pay transaction fees");
+        setErrorMessage(t("ErrorMessage.Not enough ETH"));
         return;
       }
 
@@ -905,7 +909,11 @@ function TokenRequestController(props) {
         !balanceFloat ||
         web3.utils.toBN(balance).lt(requestedAmountDecimals)
       ) {
-        setErrorMessage(`Not enough ${requestedTokenSymbol} on balance`);
+        setErrorMessage(
+          t(`ErrorMessage.Not Enough Token On Balance`, {
+            tokenName: requestedTokenSymbol,
+          })
+        );
         return;
       }
 
@@ -924,7 +932,11 @@ function TokenRequestController(props) {
         !agentBalanceFloat ||
         web3.utils.toBN(agentBalance).lt(offeredAmountDecimals)
       ) {
-        setErrorMessage(`Not enough ${offeredTokenSymbol} on agent balance`);
+        setErrorMessage(
+          t(`ErrorMessage.Not enough Token on agent balance`, {
+            offeredTokenSymbol: offeredTokenSymbol,
+          })
+        );
         return;
       }
 
@@ -933,7 +945,7 @@ function TokenRequestController(props) {
       const optimisticPrice = await oracle(requestedTokenAddress);
       if (!optimisticPrice) {
         setErrorMessage(
-          `It is impossible to make a withdrawal due to high volatility (This is when the price of Dex differs greatly from ours)`
+          t("ErrorMessage.It is impossible to make a withdrawal")
         );
         return;
       }

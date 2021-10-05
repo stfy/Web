@@ -157,6 +157,18 @@ const resources = {
         APY: "APY",
         TOTAL: "TOTAL",
       },
+
+      ErrorMessage: {
+        "Not enough balance": "Not enough USDT / USDC / DAI on balance",
+        "Not enough ETH": "Not enough ETH to pay transaction fees",
+        "only DAI withdrawal is allowed":
+          "At the moment, only DAI withdrawal is allowed",
+        "Not Enough Token On Balance": "Not enough {{tokenName}} on balance",
+        "Not enough Token on agent balance":
+          "Not enough {{offeredTokenSymbol}} on agent balance",
+        "It is impossible to make a withdrawal":
+          "It is impossible to make a withdrawal due to high volatility (This is when the price of Dex differs greatly from ours)",
+      },
     },
   },
   ru: {
@@ -285,6 +297,18 @@ const resources = {
         "Profit/Loss": "Прибыль/Убыток",
         APY: "APY",
         TOTAL: "ИТОГО",
+      },
+
+      ErrorMessage: {
+        "Not enough balance": "Недостаточно USDT / USDC / DAI на балансе",
+        "Not enough ETH": "Недостаточно ETH для оплаты комисии за транзакци.",
+        "only DAI withdrawal is allowed":
+          "На данный момнет, доступен только вывод DAI",
+        "Not Enough Token On Balance": "Недостаточно {{tokenName}} на балансе",
+        "Not enough Token on agent balance":
+          "Недостаточно {{offeredTokenSymbol}} на балансе агента",
+        "It is impossible to make a withdrawal":
+          "It is impossible to make a withdrawal due to high volatility (This is when the price of Dex differs greatly from ours)",
       },
     },
   },
