@@ -17,22 +17,23 @@ class PrivacyPolicy extends React.Component {
           <div className="text-block inner">
             <h3 className="title-3">Introduction</h3>
             <p>
-              Berezka DeFi Fund and its affiliates (hereinafter, “Berezka”, "the
-              Company", "we", "us" or "our") are committed to protecting and
-              respecting your privacy. In addition, we recognize that persons
-              who use Berezka value their privacy. This Privacy Policy together
-              with our Terms of Use governs our collection, processing and use
-              of your Personal Information. By accessing Berezka, you are
-              consenting to the information collection and use practices
-              described in this Privacy Policy.
+              Afford Capital DAO DeFi Fund and its affiliates (hereinafter,
+              “Afford Capital DAO”, "the Company", "we", "us" or "our") are
+              committed to protecting and respecting your privacy. In addition,
+              we recognize that persons who use Afford Capital DAO value their
+              privacy. This Privacy Policy together with our Terms of Use
+              governs our collection, processing and use of your Personal
+              Information. By accessing Afford Capital DAO, you are consenting
+              to the information collection and use practices described in this
+              Privacy Policy.
             </p>
             <p>
               This Privacy Policy describes how your personal information is
               collected, used, and shared when you visit or make a purchase from
               https://berezka.io (the “Site”). We don’t ask for your personal
-              information unless we truly need it. It is Berezka's policy to
-              respect your privacy regarding any information we may collect from
-              you across our website
+              information unless we truly need it. It is Afford Capital DAO's
+              policy to respect your privacy regarding any information we may
+              collect from you across our website
             </p>
             <p>
               When you visit the Site, we automatically collect certain
@@ -74,7 +75,7 @@ class PrivacyPolicy extends React.Component {
             <p>
               The purpose of this Privacy Policy is to set out in an accountable
               and transparent way the collection and use of information by
-              Berezka
+              Afford Capital DAO
             </p>
             <h3 className="title-3">Personal Information</h3>
             <p>
@@ -92,53 +93,54 @@ class PrivacyPolicy extends React.Component {
               <li>Ethereum network information related to transactions.</li>
               <li>
                 We may receive Ethereum network information from you as a result
-                of your interaction with Berezka.
+                of your interaction with Afford Capital DAO.
               </li>
               <li>
-                Berezka requires the highest level of browser permissions that
-                could potentially lead to procurement of more Personal
-                Information than enclosed in the definition of Personal
+                Afford Capital DAO requires the highest level of browser
+                permissions that could potentially lead to procurement of more
+                Personal Information than enclosed in the definition of Personal
                 Information.
               </li>
               <li>
-                Berezka may require the use of MetaMask and may obtain
-                additional information from MetaMask related to Ethereum address
-                and transactions.
+                Afford Capital DAO may require the use of MetaMask and may
+                obtain additional information from MetaMask related to Ethereum
+                address and transactions.
               </li>
               <li>
                 World Wide Web related information, including but not limited to
                 IP Addresses, operating system and browser type may be received
-                by Berezka as a result of your interactions with Berezka
+                by Afford Capital DAO as a result of your interactions with
+                Afford Capital DAO
               </li>
               <li>
-                Berezka uses Google Analytics for purposes of monitoring web
-                traffic. Any identifying information collected via Google
-                Analytics is controlled by Google.
+                Afford Capital DAO uses Google Analytics for purposes of
+                monitoring web traffic. Any identifying information collected
+                via Google Analytics is controlled by Google.
               </li>
               <li>
                 Ethereum blockchain and other public blockchains provide
-                transparency into transactions and Berezka is not responsible
-                for preventing or managing information broadcasted on a
-                blockchain.
+                transparency into transactions and Afford Capital DAO is not
+                responsible for preventing or managing information broadcasted
+                on a blockchain.
               </li>
             </ol>
             <h3 className="title-3">
               Security, Protection and Use of Personal Information
             </h3>
             <p>
-              Berezka is committed to protecting your privacy. Internally, only
-              employees with a business have access to know Personal
-              Information, or whose duties reasonably require access to it are
-              granted access to Personal Information.
+              Afford Capital DAO is committed to protecting your privacy.
+              Internally, only employees with a business have access to know
+              Personal Information, or whose duties reasonably require access to
+              it are granted access to Personal Information.
             </p>
             <p>
-              Berezka’s systems and data are constantly under review to ensure
-              that you are getting the best class of service and that market
-              leading security features are in place.
+              Afford Capital DAO’s systems and data are constantly under review
+              to ensure that you are getting the best class of service and that
+              market leading security features are in place.
             </p>
             <p>
-              Berezka reserves the right to retain and share certain personal
-              Information in order to meet our regulatory and statutory
+              Afford Capital DAO reserves the right to retain and share certain
+              personal Information in order to meet our regulatory and statutory
               requirements and further to our contractual agreements with
               partners and third parties.
             </p>
@@ -152,21 +154,21 @@ class PrivacyPolicy extends React.Component {
               Information through foreign laws. You need to be aware that the
               privacy standards of those countries may be lower than those of
               the jurisdiction in which you reside. You should note that you are
-              not obliged to give your Personal Information to Berezka, but if
-              you choose not to do so, we may not be able to provide our
-              services, or your access to our services may be limited.
+              not obliged to give your Personal Information to Afford Capital
+              DAO, but if you choose not to do so, we may not be able to provide
+              our services, or your access to our services may be limited.
             </p>
             <h3 className="title-3">Consent</h3>
             <p>
               Consent is required for the collection of Personal Information and
               the subsequent use of disclosure of Personal Information. The form
               of consent may vary depending upon the circumstances and the type
-              of Personal information obtained. Your agreement with Berezka’s
-              Terms of Service constitutes your consent to the collection and
-              use of Personal Information as described in this Privacy Policy.
-              Berezka reserves the right to use and disclose Personal
-              Information without your knowledge or consent as permitted by
-              applicable law.
+              of Personal information obtained. Your agreement with Afford
+              Capital DAO’s Terms of Service constitutes your consent to the
+              collection and use of Personal Information as described in this
+              Privacy Policy. Afford Capital DAO reserves the right to use and
+              disclose Personal Information without your knowledge or consent as
+              permitted by applicable law.
             </p>
             <h3 className="title-3">Disclosure of Personal Information</h3>
             <p>
@@ -176,13 +178,14 @@ class PrivacyPolicy extends React.Component {
               permitted by law. We may make available the Personal Information
               that you provide to us to our affiliates, agents, representatives,
               service providers and contractors for these purposes. We also
-              reserve the right to disclose Personal information that Berezka
-              believe, in good faith, is appropriate or necessary to enforce our
-              Terms of Use, take precautions against liability or harm, to
-              investigate and respond to third-party claims or allegations, to
-              respond to a court order or official requests, to protect security
-              or integrity of Berezka and to protect the rights, property or
-              safety of Berezka, our uses or others.
+              reserve the right to disclose Personal information that Afford
+              Capital DAO believe, in good faith, is appropriate or necessary to
+              enforce our Terms of Use, take precautions against liability or
+              harm, to investigate and respond to third-party claims or
+              allegations, to respond to a court order or official requests, to
+              protect security or integrity of Afford Capital DAO and to protect
+              the rights, property or safety of Afford Capital DAO, our uses or
+              others.
             </p>
             <p>
               We may share Users' Personal Information with any financial
@@ -208,11 +211,11 @@ class PrivacyPolicy extends React.Component {
               us under applicable data protection laws.
             </p>
             <p>
-              In the event that Berezka is involved in a merger, acquisition,
-              sale, bankruptcy, insolvency, reorganization, receivership,
-              assignment or the application of laws or change of control, there
-              may be a disclosure of your information to another entity related
-              to such an event.
+              In the event that Afford Capital DAO is involved in a merger,
+              acquisition, sale, bankruptcy, insolvency, reorganization,
+              receivership, assignment or the application of laws or change of
+              control, there may be a disclosure of your information to another
+              entity related to such an event.
             </p>
             <h3 className="title-3">
               Access and Changing of Personal Information
@@ -224,10 +227,10 @@ class PrivacyPolicy extends React.Component {
               will usually respond to your request within 14 days. You may also
               request the deletion or destruction of your Personal Information,
               your Account details or your Transaction details by sending an
-              email to us. Berezka will act on your request only when it is not
-              inconsistent with its legal and regulatory obligations and
-              compliance procedures. Upon your written request, we will inform
-              you of the use and general disclosure of your Personal
+              email to us. Afford Capital DAO will act on your request only when
+              it is not inconsistent with its legal and regulatory obligations
+              and compliance procedures. Upon your written request, we will
+              inform you of the use and general disclosure of your Personal
               Information. Depending on the nature of your request, there may be
               a minimal charge for accessing your Personal Information.
             </p>
@@ -285,8 +288,8 @@ class PrivacyPolicy extends React.Component {
               For more information about our privacy practices, if you have
               questions, or if you would like to make a complaint, please
               contact us by e-mail{" "}
-              <a className="link-color" href="mailto:hello@berezka.io">
-                hello@berezka.io
+              <a className="link-color" href="mailto:hello@afford.capital">
+                hello@afford.capital
               </a>
             </p>
           </div>

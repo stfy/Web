@@ -12,14 +12,14 @@ class CookiePolicy extends React.Component {
           <div className="text-block inner">
             <h3 className="title-3">Introduction</h3>
             <p>
-              This cookie policy explains what cookies are and how Berezka DeFi
-              Fund and its affiliates (hereinafter, “Berezka”, "the Company",
-              "we", "us" or "our") uses them. We encourage you to read the
-              policy in full so that you can understand what information we
-              collect using cookies and how that information is used. By using
-              our sites, you are agreeing that we can use cookies in accordance
-              with this policy. This cookies policy should be read together with
-              our Privacy Policy.
+              This cookie policy explains what cookies are and how Afford
+              Capital DAO DeFi Fund and its affiliates (hereinafter, “Afford
+              Capital DAO”, "the Company", "we", "us" or "our") uses them. We
+              encourage you to read the policy in full so that you can
+              understand what information we collect using cookies and how that
+              information is used. By using our sites, you are agreeing that we
+              can use cookies in accordance with this policy. This cookies
+              policy should be read together with our Privacy Policy.
             </p>
             <h3 className="title-3">What are cookies?</h3>
             <p>
@@ -151,8 +151,8 @@ class CookiePolicy extends React.Component {
               For more information about our privacy practices, if you have
               questions, or if you would like to make a complaint, please
               contact us by e-mail{" "}
-              <a className="link-color" href="mailto:hello@berezka.io">
-                hello@berezka.io
+              <a className="link-color" href="mailto:hello@afford.capital">
+                hello@afford.capital
               </a>
             </p>
           </div>
