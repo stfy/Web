@@ -105,6 +105,7 @@ const resources = {
       MyAccount: {
         "My Account": "My Account",
         "Connect wallet": "Connect wallet",
+        TableInfo: "Move the table left and right, to watch it in full",
       },
 
       TokenDashboard: {
@@ -246,6 +247,8 @@ const resources = {
       MyAccount: {
         "My Account": "Мой аккаунт",
         "Connect wallet": "Подключить кошелек",
+        TableInfo:
+          "Двигайте таблицу влево-вправо, чтобы посмотреть ее полностью",
       },
 
       TokenDashboard: {
