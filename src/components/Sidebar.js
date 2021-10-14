@@ -59,6 +59,14 @@ function Sidebar(props) {
           {t("sidebar.Join DAO")}
         </NavLink>
 
+        <NavLink
+          to="/account"
+          onClick={() => hideSidebar()}
+          className="sidebar-nav__item"
+        >
+          {t("sidebar.My Account")}
+        </NavLink>
+
         <div className="sidebar-nav__item sidebar-nav__item--address">
           {address ? (
             formatAddress(address)
