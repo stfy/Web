@@ -37,7 +37,7 @@ function Sidebar(props) {
           {t("sidebar.Main")}
         </NavLink>
         <NavLink
-          to={"/"}
+          to={"/#strategies"}
           onClick={() => hideSidebar()}
           className="sidebar-nav__item"
         >

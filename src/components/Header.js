@@ -56,7 +56,7 @@ function Header(props) {
             <Link className="header__menu-item" to="/">
               {t("header.About Us")}
             </Link>
-            <Link className="header__menu-item" to="/">
+            <Link className="header__menu-item" to="/#strategies">
               {t("header.Strategies")}
             </Link>
             <a

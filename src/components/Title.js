@@ -17,9 +17,9 @@ class Title extends React.Component {
                 <div className="page-index__main-logo">
                   <DAOAMainLogo />
                 </div>
-                <div className="page-index__main-logo--mobile">
-                  <DAOMainLogoMobile />
-                </div>
+                {/*<div className="page-index__main-logo--mobile">*/}
+                {/*  <DAOMainLogoMobile />*/}
+                {/*</div>*/}
               </div>
 
               <div className="page-index__title-right">
