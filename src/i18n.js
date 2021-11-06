@@ -143,7 +143,7 @@ const resources = {
       },
 
       token: {
-        Tiger: "Tiger",
+        Leopard: "Leopard",
       },
 
       TokenTableInfo: {
@@ -286,7 +286,7 @@ const resources = {
       },
 
       token: {
-        Tiger: "Тигр",
+        Leopard: "Леопард",
       },
 
       TokenTableInfo: {

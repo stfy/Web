@@ -47,7 +47,7 @@ export const computeCarry = (tokenAddress, mergedRaw, recvCarry) => {
     //console.log(`Computing daily carry for day: ${dayId}`);
     const currentDayData = mutable[i];
     const prevDayData = mutable[i + 1];
-    const Q = currentDayData.supply / 10 ** 18;
+    const Q = prevDayData.supply / 10 ** 18;
     const P = currentDayData.price / 10 ** 6;
     let PprevAfterCarry = 0;
     let totalCarry = 0;

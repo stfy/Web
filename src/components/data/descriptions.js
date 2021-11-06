@@ -3,24 +3,26 @@ import React from "react";
 export const Afford_i18n = {
   ru: {
     Short:
-      "Стратегия автоматической покупки/продажи волатильных активов (н-р, ETH, BTC) при пересечении 20-дневной средней скользящей цены актива.",
+      "Представьте, что у вас есть биржа и вы получаете комиссию с каждой сделки.",
     Details: `
-    ETH, BTC или другие DeFi активы покупаются и удерживаются до момента пересечения 20-дневной средней скользящей цены. На этом этапе актив продается за стейблкоин и выкупается снова, когда 20-дневная средняя скользящая цена поднимается выше ценовой отметки. Ребалансировка осуществляется не чаще, чем раз в 4 дня.
+    Стейблкоины распределяются между децентрализованными биржами (Uniswap, dydx и др.) и делятся на торговые пары (ETH/USDC, USDC/Dai и др.). Каждая биржа взимает комиссию с каждой сделки в данных парах и делит комиссию с вами. Стратегия Леопард может включать другие инвестиционные инструменты, которые вводятся после голосования в DAO.
     `,
     Benefits: `
-      - Возможно резкое падение цены выбранного актива (ETH, BTC и др.) и длительный низкий рыночный период с нулевым движением <br/>
-      - Если вывод из актива производится сразу после падения цены, убыток может быть значительным (историческое предельное падение цены ETH в 2020 году: с -1,7% до -26,5%)
+      - моментальный вывод <br/>
+      - ограниченное воздействие волатильных активов (н-р, ETH, если он выбран в торгуемой паре), сглаженное заработанными торговыми комиссиями <br/>
+      - более высокая доходность при более длительных периодах инвестирования
     `,
   },
   en: {
     Short:
-      "Automated buy/sell strategy of volatile assets (e.g. ETH,BTC) when a 20 days moving average asset price point is crossed.",
+      "Imagine that you own an exchange and earn commission from each trade.",
     Details: `
-    ETH, BTC or other DeFi assets are bought and held up to the point when the 20 days moving average price is crossed. At this stage the asset is sold for stable coin, and repurchased again once the 20 days moving average price moves above the price point. Rebalanced not earlier than every 4 days.
+    Stable coins are allocated across decentralized exchanges (Uniswap, dydx, etc.) and are split into trading pairs (ETH/USDC, USDC/Dai, etc). Each exchange charges a commission on each trade in such pairs and shares the commission with you. Leopard strategy may include other investment instruments which are introduced after DAO voting.
     `,
     Benefits: `
-    - Possible sharp price drop of selected asset (ETH, BTC, etc) and long low market period with zero movement <br/>
-    = If withdrawal from the asset is made right after the price drop the loss may be significant (2020 ETH historical peak price drops = from -1,7% to -26,5%)
+    - instant withdrawal <br/>
+    - limited exposure to volatile assets (e.g. ETH, if selected in traded pair), smoothed by earned trading commissions <br/>
+    - higher returns with longer investment periods
     `,
   },
 };
