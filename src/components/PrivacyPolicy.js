@@ -7,12 +7,7 @@ class PrivacyPolicy extends React.Component {
         <section className="section">
           <div className="section__header">
             <h1 className="title">Privacy Policy</h1>
-            <div
-              className="section__subtitle"
-              style={{ marginLeft: "-185px", fontSize: "14px" }}
-            >
-              updated 23.07.2020
-            </div>
+            <div className="section__subtitle">updated 23.07.2020</div>
           </div>
           <div className="text-block inner">
             <h3 className="title-3">Introduction</h3>
@@ -30,10 +25,10 @@ class PrivacyPolicy extends React.Component {
             <p>
               This Privacy Policy describes how your personal information is
               collected, used, and shared when you visit or make a purchase from
-              https://berezka.io (the “Site”). We don’t ask for your personal
-              information unless we truly need it. It is Afford Capital DAO's
-              policy to respect your privacy regarding any information we may
-              collect from you across our website
+              https://afford.capital (the “Site”). We don’t ask for your
+              personal information unless we truly need it. It is Afford Capital
+              DAO's policy to respect your privacy regarding any information we
+              may collect from you across our website
             </p>
             <p>
               When you visit the Site, we automatically collect certain
