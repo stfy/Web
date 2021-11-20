@@ -6,10 +6,6 @@ export const tokenInfo = {
     name: "Leopard",
     tableName: "Leopard",
     dao: "0xe6563a2e20c6025174d63a5af64b157a59b91c7a",
-    carryPercent: 0.2,
-    vaults: ["0x80eb71730f63c124db241ce1fd03f2b360436312"],
-    maximumDiff: 4,
-    enableCarry: true,
   },
 };
 

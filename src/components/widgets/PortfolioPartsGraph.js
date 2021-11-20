@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { round } from "./round";
 import { colorByIndex } from "./colors";
-import { fetchFolio } from "./fetchFolio";
+import { fetchWeb3Data } from "./daoes";
 import Highcharts from "highcharts/highcharts";
 import highchartsMore from "highcharts/highcharts-more";
 import solidGauge from "highcharts/modules/solid-gauge";
@@ -19,7 +19,7 @@ const PortfolioPartsGraph = (props) => {
     const fn = async () => {
       setLoading(true);
 
-      const pricePercent = await fetchFolio(tokenAddress);
+      const pricePercent = await fetchWeb3Data(tokenAddress);
 
       if (!isCancelled) {
         setLoading(false);

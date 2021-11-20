@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { colorByIndex } from "./colors";
-import { fetchFolio } from "./fetchFolio";
+import { fetchWeb3Data } from "./daoes";
 
 const PortfolioParts = (props) => {
   const { tokenAddress } = props;
@@ -14,7 +14,7 @@ const PortfolioParts = (props) => {
     const fn = async () => {
       setLoading(true);
 
-      const pricePercent = await fetchFolio(tokenAddress);
+      const pricePercent = await fetchWeb3Data(tokenAddress);
 
       if (!isCancelled) {
         setLoading(false);

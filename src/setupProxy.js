@@ -48,4 +48,12 @@ module.exports = function (app) {
       changeOrigin: true,
     })
   );
+
+  app.use(
+    "/api",
+    createProxyMiddleware({
+      target: "https://berezka.xyz",
+      changeOrigin: true,
+    })
+  );
 };

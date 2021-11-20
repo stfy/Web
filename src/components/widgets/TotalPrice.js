@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTokenDatas } from "./useTokenData";
-import { fetchCommonAll } from "./fetchCommon";
+import { fetchCommonAll } from "./daoes";
 import { round } from "./round";
 
 const uniqueBy = (x, f) =>
@@ -24,7 +24,6 @@ const computeSum = (datas) => {
       round(Number.parseFloat(merged[0].totalPrice) / 10 ** 18 / 10 ** 6, 0) -
         (merged[0].totalCarry > 0 ? merged[0].totalCarry : 0 || 0)
     );
-
     sum += tokenSum;
   }
   return sum;
@@ -57,7 +56,7 @@ const TotalPrice = (props) => {
       {totalPrice
         .toFixed(0)
         .toString()
-        .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
     </>
   );
 };

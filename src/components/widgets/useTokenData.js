@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { fetchCommon } from "./fetchCommon";
-import { mergeByDayID } from "./merger";
-import { nameByAddress, tokenInfo, tokens } from "../data/tokens";
-import { fetchDedupe } from "fetch-dedupe";
-import { fetchCarry, computeCarry } from "./carry";
+import { fetchCommon } from "./daoes";
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
 export const useTokenDatas = (tokenAddresses) => {
@@ -38,9 +34,10 @@ export const useTokenData = (
   }
 ) => {
   const [data, setData] = useState();
-  const [historicalData, setHistoricalData] = useState();
-  const [carryData, setCarryData] = useState();
+  //const [historicalData, setHistoricalData] = useState();
+  //const [carryData, setCarryData] = useState();
 
+  /*
   useEffect(() => {
     const fn = async () => {
       console.log(`Getting price`);
@@ -58,55 +55,26 @@ export const useTokenData = (
     setData(null);
     fn();
   }, [tokenAddress]);
+*/
 
   useEffect(() => {
     const fn = async () => {
-      console.log(`Getting carry`);
-      try {
-        const carryData = await fetchCarry(tokenAddress);
-        setCarryData(carryData);
-      } catch (e) {
-        setCarryData([]);
-      }
+      console.log(`Getting price from daoes`);
+      const data = await fetchCommon(tokenAddress, options.precision);
+      setData(data);
     };
+    setData(null);
     fn();
   }, [tokenAddress]);
 
-  useEffect(() => {
-    const fn = async () => {
-      const historicalData = await fetchCommon(tokenAddress, options.precision);
-      setHistoricalData(historicalData);
-    };
-    fn();
-  }, [tokenAddress]);
-
-  if (!data || !historicalData || !carryData) {
+  if (!data) {
     return {
       loading: true,
     };
   }
 
-  let merged = mergeByDayID(historicalData, data);
-
-  const tokenName = nameByAddress(tokenAddress);
-  const enableCarry = tokenInfo[tokenName].enableCarry;
-  if (enableCarry) {
-    merged = computeCarry(tokenAddress, merged, carryData);
-  }
-
-  if (options.computeSeparate) {
-    const graphOnly = mergeByDayID([], [...data]);
-    const excelOnly = mergeByDayID([...historicalData], []);
-    return {
-      loading: false,
-      merged,
-      graphOnly,
-      excelOnly,
-    };
-  } else {
-    return {
-      loading: false,
-      merged,
-    };
-  }
+  return {
+    loading: false,
+    merged: data,
+  };
 };

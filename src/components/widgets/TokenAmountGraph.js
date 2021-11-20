@@ -16,7 +16,13 @@ const TokenAmountGraph = (props) => {
     .map((it) => {
       return [
         Number.parseInt(it.date) * 1000,
-        round(Number.parseFloat(it.totalPrice / 10 ** 18 / 10 ** 6), 3),
+        round(
+          Number.parseInt(
+            round(Number.parseFloat(it.totalPrice) / 10 ** 18 / 10 ** 6, 0) -
+              (it.totalCarry > 0 ? it.totalCarry : 0 || 0)
+          ),
+          3
+        ),
       ];
     })
     .reverse();
@@ -88,7 +94,7 @@ const TokenAmountGraph = (props) => {
 
     series: [
       {
-        color: "#000",
+        color: "#008cb9",
         name: "Portfolio Value",
         data: chartData,
       },
