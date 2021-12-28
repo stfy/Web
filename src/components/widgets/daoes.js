@@ -11,10 +11,15 @@ export const fetchCommonAll = async (tokens) => {
   return result;
 };
 
-export const fetchDao = async (tokenAddress) => {
+export const fetchDaos = async () => {
   const daoes = await fetchDedupe(`/api/v1/public/daoes`).then(
     (res) => res.data
   );
+  return daoes.filter((dao) => dao.active);
+};
+
+export const fetchDao = async (tokenAddress) => {
+  const daoes = await fetchDaos();
   const dao = daoes.find(
     (dao) => dao.token.contract.toLowerCase() === tokenAddress.toLowerCase()
   );
@@ -26,9 +31,7 @@ export const fetchDao = async (tokenAddress) => {
 };
 
 export const fetchTokens = async () => {
-  const daoes = await fetchDedupe(`/api/v1/public/daoes`).then(
-    (res) => res.data
-  );
+  const daoes = await fetchDaos();
   const tokenAddresses = daoes.map((dao) => dao.token.contract.toLowerCase());
   const tokenNames = Object.keys(tokenInfo);
   const remoteTokenNames = tokenNames.filter((token) =>
@@ -38,9 +41,7 @@ export const fetchTokens = async () => {
 };
 
 export const fetchTokensFull = async () => {
-  const daoes = await fetchDedupe(`/api/v1/public/daoes`).then(
-    (res) => res.data
-  );
+  const daoes = await fetchDaos();
 
   const tokenAddresses = daoes.map((dao) => dao.token.contract.toLowerCase());
   const tokenNames = Object.keys(tokenInfo);
@@ -78,7 +79,7 @@ export const fetchCommon = async (tokenAddress, precision = 3) => {
     return [
       {
         date: round(new Date().getTime() / 1000, 0),
-        dayId: round(new Date().getTime() / 1000 / 86400, 0),
+        dayId: Math.floor(new Date().getTime() / 1000 / 86400),
         price: "0",
         token: tokenAddress.toLowerCase(),
         supply: "0",
@@ -94,7 +95,7 @@ export const fetchCommon = async (tokenAddress, precision = 3) => {
   const adjusted = prices.map((data) => {
     return {
       date: round(new Date(data.dt).getTime() / 1000, 0),
-      dayId: round(new Date(data.dt).getTime() / 1000 / 86400, 0),
+      dayId: Math.floor(new Date(data.dt).getTime() / 1000 / 86400),
       price:
         "" +
         round(Number.parseFloat(data.dao_token_price) * 10 ** 6, precision),
@@ -157,5 +158,28 @@ export const fetchVaults = async (tokenAddress) => {
     (res) => res.data
   );
   let adjusted = folio.map((data) => data.address);
+  return adjusted;
+};
+
+export const fetchCurrentPrice = async (tokenAddress) => {
+  let daoId = "";
+  if (tokenAddress === "0xa579b0ee7f64ea4da01bf43ab173a597d9bb7bd4") {
+    daoId = "10000000-0000-0000-0000-000000000000";
+  } else {
+    const dao = await fetchDao(tokenAddress);
+    if (!dao) {
+      return [];
+    }
+    daoId = dao.id;
+  }
+
+  const rawPrice = await fetchDedupe(
+    `/api/v1/public/daos/${daoId}/current_price`
+  ).then((res) => res.data);
+  let adjusted = {
+    price: rawPrice.PriceBigInt,
+    ts: rawPrice.DTBigInt,
+    signature: rawPrice.signature,
+  };
   return adjusted;
 };

@@ -24,7 +24,6 @@ const computeSum = (datas) => {
       round(Number.parseFloat(merged[0].totalPrice) / 10 ** 18 / 10 ** 6, 0) -
         (merged[0].totalCarry > 0 ? merged[0].totalCarry : 0 || 0)
     );
-
     sum += tokenSum;
   }
   return sum;
@@ -47,9 +46,7 @@ const TotalPrice = (props) => {
     return <>...</>;
   }
 
-  const graphPrice = computeSum(merged);
-  const legacyPrice = computeSum(historicalData);
-  const totalPrice = graphPrice + legacyPrice;
+  const totalPrice = computeSum(merged);
 
   return (
     <>

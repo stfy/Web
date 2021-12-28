@@ -20,7 +20,7 @@ function OnChainValidation(props) {
             <a
               target="_blank"
               key={index}
-              href={`https://debank.com/profile/${vault}`}
+              href={`https://zapper.fi/account/${vault}`}
             >
               {t("OnChainValidation.Wallet")}
               {tokenInfo[requestedToken].vaults.length === 1
