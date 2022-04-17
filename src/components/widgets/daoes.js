@@ -12,9 +12,9 @@ export const fetchCommonAll = async (tokens) => {
 };
 
 export const fetchDaos = async () => {
-  const daoes = await fetchDedupe(`/api/v1/public/daoes`).then(
-    (res) => res.data
-  );
+  const daoes = await fetchDedupe(
+    `/api/v1/public/daoes?per_page=1000&page=1`
+  ).then((res) => res.data);
   return daoes.filter((dao) => dao.active);
 };
 
@@ -90,7 +90,7 @@ export const fetchCommon = async (tokenAddress, precision = 3) => {
   }
   const daoId = dao.id;
   const prices = await fetchDedupe(
-    `/api/v1/public/daoes/${daoId}/token_price_history_daily`
+    `/api/v1/public/daoes/${daoId}/token_price_history_daily?per_page=1000&page=1`
   ).then((res) => res.data);
   const adjusted = prices.map((data) => {
     return {
@@ -128,7 +128,7 @@ export const fetchWeb3Data = async (tokenAddress) => {
   }
   const daoId = dao.id;
   const folio = await fetchDedupe(
-    `/api/v1/public/daoes/${daoId}/portfolio`
+    `/api/v1/public/daoes/${daoId}/portfolio?per_page=1000&page=1`
   ).then((res) => res.data);
   let adjusted = folio.map((data) => {
     return {
@@ -154,9 +154,9 @@ export const fetchVaults = async (tokenAddress) => {
   }
   const daoId = dao.id;
 
-  const folio = await fetchDedupe(`/api/v1/public/daoes/${daoId}/wallets`).then(
-    (res) => res.data
-  );
+  const folio = await fetchDedupe(
+    `/api/v1/public/daoes/${daoId}/wallets?per_page=1000&page=1`
+  ).then((res) => res.data);
   let adjusted = folio.map((data) => data.address);
   return adjusted;
 };
@@ -174,7 +174,7 @@ export const fetchCurrentPrice = async (tokenAddress) => {
   }
 
   const rawPrice = await fetchDedupe(
-    `/api/v1/public/daos/${daoId}/current_price`
+    `/api/v1/public/daos/${daoId}/current_price?per_page=1000&page=1`
   ).then((res) => res.data);
   let adjusted = {
     price: rawPrice.PriceBigInt,
