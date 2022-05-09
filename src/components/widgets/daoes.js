@@ -12,15 +12,15 @@ export const fetchCommonAll = async (tokens) => {
 };
 
 export const fetchDaos = async () => {
-  const daoes = await fetchDedupe(
-    `/api/v1/public/daoes?per_page=1000&page=1`
+  const daos = await fetchDedupe(
+    `/api/v1/public/daos?per_page=1000&page=1`
   ).then((res) => res.data);
-  return daoes.filter((dao) => dao.active);
+  return daos.filter((dao) => dao.active);
 };
 
 export const fetchDao = async (tokenAddress) => {
-  const daoes = await fetchDaos();
-  const dao = daoes.find(
+  const daos = await fetchDaos();
+  const dao = daos.find(
     (dao) => dao.token.contract.toLowerCase() === tokenAddress.toLowerCase()
   );
   if (!dao) {
@@ -31,8 +31,8 @@ export const fetchDao = async (tokenAddress) => {
 };
 
 export const fetchTokens = async () => {
-  const daoes = await fetchDaos();
-  const tokenAddresses = daoes.map((dao) => dao.token.contract.toLowerCase());
+  const daos = await fetchDaos();
+  const tokenAddresses = daos.map((dao) => dao.token.contract.toLowerCase());
   const tokenNames = Object.keys(tokenInfo);
   const remoteTokenNames = tokenNames.filter((token) =>
     tokenAddresses.includes(tokenInfo[token].address.toLowerCase())
@@ -41,9 +41,9 @@ export const fetchTokens = async () => {
 };
 
 export const fetchTokensFull = async () => {
-  const daoes = await fetchDaos();
+  const daos = await fetchDaos();
 
-  const tokenAddresses = daoes.map((dao) => dao.token.contract.toLowerCase());
+  const tokenAddresses = daos.map((dao) => dao.token.contract.toLowerCase());
   const tokenNames = Object.keys(tokenInfo);
   const existingTokenAddresses = tokenNames.map((name) =>
     tokenInfo[name].address.toLowerCase()
@@ -58,7 +58,7 @@ export const fetchTokensFull = async () => {
       index[info.address.toLowerCase()] = info;
     });
 
-  const result = daoes
+  const result = daos
     .filter((dao) =>
       displayTokenAddresses.includes(dao.token.contract.toLowerCase())
     )
@@ -90,7 +90,7 @@ export const fetchCommon = async (tokenAddress, precision = 3) => {
   }
   const daoId = dao.id;
   const prices = await fetchDedupe(
-    `/api/v1/public/daoes/${daoId}/token_price_history_daily?per_page=1000&page=1`
+    `/api/v1/public/daos/${daoId}/token_price_history_daily?per_page=1000&page=1`
   ).then((res) => res.data);
   const adjusted = prices.map((data) => {
     return {
@@ -128,7 +128,7 @@ export const fetchWeb3Data = async (tokenAddress) => {
   }
   const daoId = dao.id;
   const folio = await fetchDedupe(
-    `/api/v1/public/daoes/${daoId}/portfolio?per_page=1000&page=1`
+    `/api/v1/public/daos/${daoId}/portfolio?per_page=1000&page=1`
   ).then((res) => res.data);
   let adjusted = folio.map((data) => {
     return {
@@ -155,7 +155,7 @@ export const fetchVaults = async (tokenAddress) => {
   const daoId = dao.id;
 
   const folio = await fetchDedupe(
-    `/api/v1/public/daoes/${daoId}/wallets?per_page=1000&page=1`
+    `/api/v1/public/daos/${daoId}/wallets?per_page=1000&page=1`
   ).then((res) => res.data);
   let adjusted = folio.map((data) => data.address);
   return adjusted;
